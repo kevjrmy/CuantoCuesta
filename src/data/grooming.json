@@ -1,0 +1,694 @@
+{
+  "items": [
+    {
+      "id": 201,
+      "name": "VEAN TATTOO",
+      "category": "tienda-de-tatuajes",
+      "label": "Tatuajes",
+      "schema_type": "HealthAndBeautyBusiness",
+      "description": "Somos la cadena más grande de estudios de tatuajes y piercings. Nuestras sedes están presentes en 17 países: en Ucrania, Polonia, Alemania, Lituania, Chequia, Inglaterra y otros países europeos, así como en Canadá. Además de los tatuajes y el piercing, también nos dedicamos a la formación y contratación de miles de especialistas en todo el mundo.",
+      "city": "valencia",
+      "address": {
+        "street": "C/ de Jesús 24, 46007, Valencia",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46007",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.46754000636054,
+        "lng": -0.3823500000000024
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 218
+      },
+      "price_from": 30,
+      "price_to": 40,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/115951/biz_photo/13a2ac66859a4928a861fc0095acf0-vean-tattoo-biz-photo-b5f94e22af214358a3b8887f6084d2-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/115951/logo/3b26058d1bad4817838c7283e7bc1a-vean-tattoo-logo-4f0693696021475ca5f7a617889103-booksy.jpeg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": false,
+      "sources": [
+        "booksy"
+      ],
+      "last_verified": "2026-06-13T18:29:25Z",
+      "stale": false
+    },
+    {
+      "id": 217,
+      "name": "KRAFT",
+      "category": "barberia",
+      "label": "Barbería",
+      "schema_type": "HairSalon",
+      "description": "Check out KRAFT in Valencia - explore pricing, reviews, and open appointments online 24/7!",
+      "city": "valencia",
+      "address": {
+        "street": "Calle Palleter, 30, 46008, Valencia",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46008",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.46981,
+        "lng": -0.38668
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 162
+      },
+      "price_from": 15,
+      "price_to": 23,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/122363/biz_photo/8e54bcddb67f4d7d93b585d058ce1a-adrian-garcia-biz-photo-13f5d5673bbd457783bcec648b7dea-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/122363/logo/4625db4ab7444c0f9401bf3de6370e-adrian-garcia-logo-2213ae22e76f41d3a7bbfcb7c7de1f-booksy.jpeg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": false,
+      "sources": [
+        "booksy"
+      ],
+      "last_verified": "2026-06-13T18:29:36Z",
+      "stale": false
+    },
+    {
+      "id": 256,
+      "name": "Sori Uñas y Estética",
+      "category": "salon-de-unas",
+      "label": "Uñas",
+      "schema_type": "NailSalon",
+      "description": "Somos Centro de Formación \n\nTécnico especialista en Manicura rusa y esmaltado en gel \nPedicura estetica \nExtensión de uñas en Acrilico, Polygel y Gel,\nNail Art \nTratamientos de hidratación\nMasajes relajantes",
+      "city": "valencia",
+      "address": {
+        "street": "Avenida de Pérez Galdós, 80, Bajo izq, 46008, Valencia",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46008",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.4687600063612,
+        "lng": -0.391119999999972
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 59
+      },
+      "price_from": 18,
+      "price_to": 55,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/28167/biz_photo/8151e76b70a74752bda962dbfdace3-sori-unas-y-estetica-biz-photo-8b43a8dba74b4034988a5567c3979a-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/28167/logo/c950ef987226473585bcb0dfb30800-sori-unas-y-estetica-logo-48512db473d64b0abbbcc296dc71ad-booksy.jpeg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": false,
+      "sources": [
+        "booksy"
+      ],
+      "last_verified": "2026-06-13T18:30:06Z",
+      "stale": false
+    },
+    {
+      "id": 202,
+      "name": "Jota Barber Shop 💈💈",
+      "category": "barberia",
+      "label": "Barbería",
+      "schema_type": "HairSalon",
+      "description": "Jota Barber Shop es una barbería moderna que combina tradición y tendencia para ofrecer una experiencia de cuidado masculino de alta calidad. Nos especializamos en cortes de cabello, arreglos de barba y afeitados al ras con toallas calientes, siempre utilizando productos de las mejores marcas para garantizar resultados excepcionales. Nuestro equipo de barberos está altamente capacitado y enfocado en brindar un servicio personalizado en un ambiente acogedor y estilizado. En Jota Barber Shop, no solo mejoramos la apariencia de nuestros clientes, sino que también ofrecemos un espacio para relajarse y disfrutar de un trato profesional y amable.\n\nTrabajamos sin citas 💇🏻‍♂️",
+      "city": "valencia",
+      "address": {
+        "street": "Carrer d'Àngel Guimerà, 42, bajo derecha, 46008, València",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46008",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.46992287646278,
+        "lng": -0.3877681685702612
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 6
+      },
+      "price_from": 10,
+      "price_to": 35,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/115577/biz_photo/8795f935c63c4b4f8cdacb8509c065-jota-barber-shop-biz-photo-90a253940bd54f34b6772b67baa1d0-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/115577/logo/4be97ff3a68b4ca29d3cafd56e32a8-jota-barber-shop-logo-cc4a824818d6479bb761ff302ab547-booksy.jpeg",
+      "sponsored": true,
+      "verified": true,
+      "unknown": false,
+      "sources": [
+        "booksy"
+      ],
+      "last_verified": "2026-06-13T18:29:25Z",
+      "stale": false
+    },
+    {
+      "id": 268,
+      "name": "BARBER SHOP",
+      "category": "barberia",
+      "label": "Barbería",
+      "schema_type": "LocalBusiness",
+      "city": "valencia",
+      "address": {
+        "street": "C/ de la Reina Na Maria, 13-3, L'Eixample, 46006 València, Valencia, Spain",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.4614529,
+        "lng": -0.3719036
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 5
+      },
+      "price_from": 5,
+      "price_to": 10,
+      "price_currency": "EUR",
+      "sponsored": true,
+      "verified": false,
+      "unknown": true,
+      "sources": [
+        "supabase"
+      ],
+      "last_verified": "2026-06-13T18:31:04Z",
+      "stale": false
+    },
+    {
+      "id": 218,
+      "name": "Shalom Barber Shop Valencia",
+      "category": "barberia",
+      "label": "Barbería",
+      "schema_type": "HairSalon",
+      "description": "Imagina un lugar donde las tijeras transforman no solo tu cabello, sino también tu estado de ánimo. \r\nEn Shalom Barber Shop, cada corte es una obra de arte que refleja tu estilo único y libera la confianza que yace dentro de ti. Ofrecemos más que una simple barbería; es un santuario del bienestar y la paz interior que se refleja en cada detalle de su esencia.",
+      "city": "valencia",
+      "address": {
+        "street": "Calle Almácera 20, Bajo derecho, 46017, Valencia",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46017",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.45213,
+        "lng": -0.39032
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 291
+      },
+      "price_from": 10,
+      "price_to": 25,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/121684/biz_photo/656397cfda864c1297f0a4610baca3-shalombarbershop-biz-photo-e84c7dbebe784cb7b061d3fde7ecfc-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/121684/logo/13f4117bc61c4ce691e57e8813915e-shalombarbershop-logo-7dc8e07adc71469cab94932cb93da6-booksy.jpeg",
+      "sponsored": true,
+      "verified": true,
+      "unknown": false,
+      "sources": [
+        "booksy"
+      ],
+      "last_verified": "2026-06-13T18:29:36Z",
+      "stale": false
+    },
+    {
+      "id": 222,
+      "name": "La Crew Barber Club - Tu Barbería en Ruzafa",
+      "category": "barberia",
+      "label": "Barbería",
+      "schema_type": "LocalBusiness",
+      "description": "Barberia clásica con conceptos actuales.\nCorte clásico, degradado, arreglo de barbas, afeitados.\n\nPreferiblemente PAGO en EFECTIVO.\n\n*Condiciones: La Inasistencia conllevara el pago del servicio y tiempo perdido para la siguiente reserva.",
+      "city": "valencia",
+      "address": {
+        "street": "Carrer de Sueca, 13, L'Eixample, 46006 València, Valencia, Spain",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46004",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.4628633,
+        "lng": -0.3758716
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 991
+      },
+      "price_from": 5,
+      "price_to": 10,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/12117/biz_photo/86a2cf3d01ec44d29c34804ea3efbd-la-crew-barber-club-tu-barberi-biz-photo-df189f0ec8be4d3f9dc366f5a5b7c6-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/12117/logo/33f8acdf841c4734b8f52e5556b7d9-la-crew-barber-club-tu-barberi-logo-a44510126c834df2b57ed692d681f5-booksy.jpeg",
+      "sponsored": true,
+      "verified": true,
+      "unknown": false,
+      "sources": [
+        "booksy",
+        "supabase"
+      ],
+      "last_verified": "2026-06-13T18:31:04Z",
+      "stale": false
+    },
+    {
+      "id": 206,
+      "name": "MALATESTA BARBER SHOP \u0026 SPA",
+      "category": "barberia",
+      "label": "Barbería",
+      "schema_type": "HairSalon",
+      "description": "Check out MALATESTA BARBER SHOP \u0026 SPA in Valencia - explore pricing, reviews, and open appointments online 24/7!",
+      "city": "valencia",
+      "address": {
+        "street": "Calle de Emilio Baró, 29, Benimaclet, 46020, Valencia",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46020",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.486070006371214,
+        "lng": -0.36187000000001035
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 28
+      },
+      "price_from": 10,
+      "price_to": 50,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/118778/biz_photo/7c1150983dc24432a21e692e61663c-malatesta-barber-shop-spa-biz-photo-a9650c08509d48f0b89970f687b05c-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/118778/logo/e9cba19f3aca4e769ec453c884f67a-malatesta-barber-shop-spa-logo-b401a9661eaf4e57a4fbfdfe0b44bc-booksy.jpeg",
+      "sponsored": true,
+      "verified": true,
+      "unknown": false,
+      "sources": [
+        "booksy"
+      ],
+      "last_verified": "2026-06-13T18:29:28Z",
+      "stale": false
+    },
+    {
+      "id": 200,
+      "name": "El Genio Barbershop",
+      "category": "barberia",
+      "label": "Barbería",
+      "schema_type": "HairSalon",
+      "description": "Especialista en, fade, barba, diseño, tinte, barbería moderna ( benimaclet)",
+      "city": "valencia",
+      "address": {
+        "street": "Avenida del Primado Reig, 52, 46010, Valencia",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46010",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.486910006371694,
+        "lng": -0.36719999999999686
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 70
+      },
+      "price_from": 10,
+      "price_to": 18,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/115262/biz_photo/72eddef9c9a74789b73f73d1975b41-el-genio-barbershop-biz-photo-785d3d582d5d4d0a9ec102b8ea0542-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/115262/logo/f0383e60b4614d7a9bfbb0b5a4b4ef-el-genio-barbershop-logo-417f2b99e9924f5db6a1a4e342254d-booksy.jpeg",
+      "sponsored": true,
+      "verified": true,
+      "unknown": false,
+      "sources": [
+        "booksy"
+      ],
+      "last_verified": "2026-06-13T18:29:23Z",
+      "stale": false
+    },
+    {
+      "id": 259,
+      "name": "NICETY Masajes y Belleza",
+      "category": "cuidado-de-la-piel",
+      "label": "Cuidado de la piel",
+      "schema_type": "BeautySalon",
+      "description": "🌺Salon de Masaje y Belleza Natural🌸\n📍Carles Cervera 15, VLC\r\n☎️Whatsapp 622158993 PIDE TU CITA\r\n💆🏻‍♀️Limpieza y tratamientos facial con productos \r\nNatural\r\n👁Lifting de Pestañas y Cejas\r\n💆🏻‍♂️Masaje corporal\n✨Tratamientos corporales, INDIBA,Radiofrecuencia \r\n✨MICROBLADING\r\n✨MADEROTERAPIA",
+      "city": "valencia",
+      "address": {
+        "street": "Calle Carlos Cervera, 15, 46006, Valencia",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46006",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.462270010000005,
+        "lng": -0.37272999999998374
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 83
+      },
+      "price_from": 30,
+      "price_to": 55,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/28673/biz_photo/abb986f093434ea481b02907851160-nicety-masajes-y-belleza-biz-photo-6d1dabaa6d8549a2a55f8084f59cd9-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/28673/logo/d0fbb71a1c9945298376e3d680cb92-bali-by-nicety-masajes-natural-logo-fcc85157ab98462c9e446f3c4f80ce-booksy.jpeg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": false,
+      "sources": [
+        "booksy"
+      ],
+      "last_verified": "2026-06-13T18:30:07Z",
+      "stale": false
+    },
+    {
+      "id": 280,
+      "name": "Jaime Lozano Perruquers | Peluqueria Valencia",
+      "category": "barberia",
+      "label": "Barbería",
+      "schema_type": "LocalBusiness",
+      "city": "valencia",
+      "address": {
+        "street": "Gran Via de les Germanies, 12, L'Eixample, 46004 València, Valencia, Spain",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.4646293,
+        "lng": -0.3750303
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 1107
+      },
+      "price_from": 5,
+      "price_to": 10,
+      "price_currency": "EUR",
+      "sponsored": true,
+      "verified": false,
+      "unknown": true,
+      "sources": [
+        "supabase"
+      ],
+      "last_verified": "2026-06-13T18:31:04Z",
+      "stale": false
+    },
+    {
+      "id": 273,
+      "name": "Bronx Hair Gallery Ruzafa",
+      "category": "barberia",
+      "label": "Barbería",
+      "schema_type": "LocalBusiness",
+      "city": "valencia",
+      "address": {
+        "street": "C. de Cuba, 42, L'Eixample, 46004 València, Valencia, Spain",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.4607232,
+        "lng": -0.376364
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 196
+      },
+      "price_from": 5,
+      "price_to": 10,
+      "price_currency": "EUR",
+      "sponsored": true,
+      "verified": true,
+      "unknown": true,
+      "sources": [
+        "supabase"
+      ],
+      "last_verified": "2026-06-13T18:31:04Z",
+      "stale": false
+    },
+    {
+      "id": 272,
+      "name": "Barbería Los Latinos",
+      "category": "barberia",
+      "label": "Barbería",
+      "schema_type": "LocalBusiness",
+      "city": "valencia",
+      "address": {
+        "street": "Calle de Matías Perelló, 50, bajo, Ensanche, 46005 Valencia, Spain",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.4622271,
+        "lng": -0.3656455
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 30
+      },
+      "price_from": 5,
+      "price_to": 10,
+      "price_currency": "EUR",
+      "sponsored": true,
+      "verified": false,
+      "unknown": true,
+      "sources": [
+        "supabase"
+      ],
+      "last_verified": "2026-06-13T18:31:04Z",
+      "stale": false
+    },
+    {
+      "id": 233,
+      "name": "Sarah Beauty, PELUQUERÍA . UÑAS . ESTÉTICA",
+      "category": "peluqueria",
+      "label": "Peluquería",
+      "schema_type": "HairSalon",
+      "description": "Peluquería y estética integral, asesoramiento personalizado y servicio enfocado a el público más exigente, calidad de servicio y atención, nos encanta cuidar de ti, sumérgete en una experiencia única mientras luces hermosa.",
+      "city": "valencia",
+      "address": {
+        "street": "Avenida Ausías March, 30, bajo, 46006, Valencia",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46006",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.454,
+        "lng": -0.37415
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 179
+      },
+      "price_from": 10,
+      "price_to": 45,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/17243/biz_photo/b54c1ee5e20f4123ba3c4b32f65c7d-sarah-beauty-biz-photo-b4265456a49f40b5be823f122856e1-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/17243/logo/00f326d66c9f46639f482ec2b0a04c-sarah-beauty-logo-37ecdf5047324f1fbddb338d00b396-booksy.jpeg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": false,
+      "sources": [
+        "booksy"
+      ],
+      "last_verified": "2026-06-13T18:29:46Z",
+      "stale": false
+    },
+    {
+      "id": 263,
+      "name": "Brooklyn Barber Shop La Plata",
+      "category": "barberia",
+      "label": "Barbería",
+      "schema_type": "LocalBusiness",
+      "description": "Check out Brooklyn Barber Shop La Plata in Valencia - explore pricing, reviews, and open appointments online 24/7!",
+      "city": "valencia",
+      "address": {
+        "street": "C/ de la Fonteta de Sant Lluís, 46, Quatre Carreres, 46006 València, Valencia, Spain",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46006",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.4551883,
+        "lng": -0.3716458
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 1097
+      },
+      "price_from": 5,
+      "price_to": 10,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/29166/biz_photo/c070d6c7a58f46258f83cd2fa7bdb3-brooklyn-barber-shop-la-plata-biz-photo-58e6119d862640778f3c4dcbc9451c-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/29166/logo/193bfedd83ed43b18dc08fce52b9eb-brooklyn-barber-shop-la-plata-logo-af88bc5b9bfd41b68533e571be465e-booksy.jpeg",
+      "sponsored": true,
+      "verified": true,
+      "unknown": false,
+      "sources": [
+        "booksy",
+        "supabase"
+      ],
+      "last_verified": "2026-06-13T18:31:04Z",
+      "stale": false
+    },
+    {
+      "id": 216,
+      "name": "Las Buenas Uñas",
+      "category": "salon-de-unas",
+      "label": "Uñas",
+      "schema_type": "NailSalon",
+      "description": "Check out Las Buenas Uñas in Valencia - explore pricing, reviews, and open appointments online 24/7!",
+      "city": "valencia",
+      "address": {
+        "street": "Calle El Bachiller, 21, 46010, Valencia",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46010",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.48175002,
+        "lng": -0.36116011
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 72
+      },
+      "price_from": 5,
+      "price_to": 20,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/120612/biz_photo/5b26b4a3f46d4d0a8d290b0f38b8d9-las-buenas-unas-biz-photo-8442a0a69405406e98a23500716079-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/120612/logo/209704c35bcf4bba8f9573b2bd6e00-las-buenas-unas-logo-16f65776d291461ca9f08f086cc50b-booksy.jpeg",
+      "sponsored": true,
+      "verified": true,
+      "unknown": false,
+      "sources": [
+        "booksy"
+      ],
+      "last_verified": "2026-06-13T18:29:35Z",
+      "stale": false
+    },
+    {
+      "id": 249,
+      "name": "Carlos Conde Peluquería Barbería San Vicente Valencia",
+      "category": "barberia",
+      "label": "Barbería",
+      "schema_type": "HairSalon",
+      "description": "Barberia Peluquería masculina ubica en el centro de Valencia cuyo objetivo es ofrecer a los clientes  un servicio de máxima calidad ofreciendo experiencia en el afeitado y en los cortes en todas sus variantes desde niño a jubilado",
+      "city": "valencia",
+      "address": {
+        "street": "Calle de San Vicente Mártir, 53, 46002, Valencia",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46002",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.47034001,
+        "lng": -0.37813
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 243
+      },
+      "price_from": 8,
+      "price_to": 22,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/22999/biz_photo/3d675857df4d4ae6b23b63319d0dd8-carlos-conde-peluqueria-barber-biz-photo-c0933a56990e48afb3be7124c0212c-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/22999/logo/c4b09f6092b54665be08bc4db32961-carlos-conde-san-vicente-logo-0dfb1440c5ee41b595935c1b836f30-booksy.jpeg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": false,
+      "sources": [
+        "booksy"
+      ],
+      "last_verified": "2026-06-13T18:29:59Z",
+      "stale": false
+    },
+    {
+      "id": 275,
+      "name": "Eddie Moon Barbería Peluquería Valencia Ruzafa",
+      "category": "barberia",
+      "label": "Barbería",
+      "schema_type": "LocalBusiness",
+      "city": "valencia",
+      "address": {
+        "street": "C. de Puerto Rico, 29, L'Eixample, 46006 València, Valencia, Spain",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.4609867,
+        "lng": -0.3761412
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 411
+      },
+      "price_from": 5,
+      "price_to": 10,
+      "price_currency": "EUR",
+      "sponsored": true,
+      "verified": false,
+      "unknown": true,
+      "sources": [
+        "supabase"
+      ],
+      "last_verified": "2026-06-13T18:31:04Z",
+      "stale": false
+    },
+    {
+      "id": 284,
+      "name": "M- Afaq Barber ~Haircuts",
+      "category": "barberia",
+      "label": "Barbería",
+      "schema_type": "LocalBusiness",
+      "city": "valencia",
+      "address": {
+        "street": "C/ de la Reina Na Maria, 4, L'Eixample, 46004 València, Valencia, Spain",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.461147,
+        "lng": -0.3722306
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 292
+      },
+      "price_from": 5,
+      "price_to": 10,
+      "price_currency": "EUR",
+      "sponsored": true,
+      "verified": false,
+      "unknown": true,
+      "sources": [
+        "supabase"
+      ],
+      "last_verified": "2026-06-13T18:31:04Z",
+      "stale": false
+    },
+    {
+      "id": 279,
+      "name": "Fresh Fade Factory Ruzafa",
+      "category": "barberia",
+      "label": "Barbería",
+      "schema_type": "LocalBusiness",
+      "city": "valencia",
+      "address": {
+        "street": "C/ de Russafa, 35, L'Eixample, 46004 València, Valencia, Spain",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.464434,
+        "lng": -0.3731619
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 276
+      },
+      "price_from": 5,
+      "price_to": 10,
+      "price_currency": "EUR",
+      "sponsored": true,
+      "verified": true,
+      "unknown": true,
+      "sources": [
+        "supabase"
+      ],
+      "last_verified": "2026-06-13T18:31:04Z",
+      "stale": false
+    }
+  ],
+  "total": 92,
+  "limit": 20,
+  "offset": 0
+}

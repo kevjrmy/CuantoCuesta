@@ -1,0 +1,602 @@
+{
+  "items": [
+    {
+      "id": 31,
+      "name": "Artigas",
+      "category": "veterinario",
+      "label": "Veterinario",
+      "schema_type": "LocalBusiness",
+      "city": "valencia",
+      "address": {
+        "street": "Carrer de Misser Mascó, 14, 46010 Valencia, Spain",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.4757309,
+        "lng": -0.36396
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 2
+      },
+      "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/mtw5K06qhyemCZ2eSl-1qw/o.jpg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": true,
+      "sources": [
+        "yelp"
+      ],
+      "last_verified": "2026-06-13T17:57:18Z",
+      "stale": false
+    },
+    {
+      "id": 19,
+      "name": "Clinica Veterinaria Stolz",
+      "category": "veterinario",
+      "label": "Veterinario",
+      "schema_type": "LocalBusiness",
+      "city": "valencia",
+      "address": {
+        "street": "Carrer del Pintor Stolz, 70 - B, 46018 Valencia, Spain",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.47035,
+        "lng": -0.40404
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 2
+      },
+      "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/-1yvYWW1W-UW2oQ6nyBDsg/o.jpg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": true,
+      "sources": [
+        "yelp"
+      ],
+      "last_verified": "2026-06-13T17:57:18Z",
+      "stale": false
+    },
+    {
+      "id": 34,
+      "name": "Gerardo Capozzi Veterinario",
+      "category": "veterinario",
+      "label": "Veterinario",
+      "schema_type": "LocalBusiness",
+      "city": "valencia",
+      "address": {
+        "street": "Carrer Cofrentes, 20, 46010 Valencia, Spain",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.48587,
+        "lng": -0.36644
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 2
+      },
+      "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/gYzjtZJdy9VsLLjeKfxGBw/o.jpg",
+      "sponsored": true,
+      "verified": true,
+      "unknown": true,
+      "sources": [
+        "yelp"
+      ],
+      "last_verified": "2026-06-13T17:57:18Z",
+      "stale": false
+    },
+    {
+      "id": 17,
+      "name": "Martín J. Molina Jiménez",
+      "category": "veterinario",
+      "label": "Veterinario",
+      "schema_type": "LocalBusiness",
+      "city": "valencia",
+      "address": {
+        "street": "Avinguda de Burjassot, 43, 46009 Valencia, Spain",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.4853859,
+        "lng": -0.385925
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 2
+      },
+      "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/YnCWGqHxyFcYdM9hhUFEHA/o.jpg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": true,
+      "sources": [
+        "yelp"
+      ],
+      "last_verified": "2026-06-13T17:57:18Z",
+      "stale": false
+    },
+    {
+      "id": 46,
+      "name": "Clinica Veterinaria San Pedro",
+      "category": "veterinario",
+      "label": "Veterinario",
+      "schema_type": "LocalBusiness",
+      "city": "valencia",
+      "address": {
+        "street": "Fray Pedro Vives,12 12-B, 46009 Valencia, Spain",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.4845265,
+        "lng": -0.380721
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 1
+      },
+      "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/h-RWarVaS0TfaA52SCDlWw/o.jpg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": true,
+      "sources": [
+        "yelp"
+      ],
+      "last_verified": "2026-06-13T17:57:18Z",
+      "stale": false
+    },
+    {
+      "id": 86,
+      "name": "Tirando del Hilo",
+      "category": "lavanderia",
+      "label": "Lavandería",
+      "schema_type": "LocalBusiness",
+      "city": "valencia",
+      "address": {
+        "street": "Carrer de Sueca, 68, 46006 Valencia, Spain",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.45916,
+        "lng": -0.37366
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 1
+      },
+      "price_from": 10,
+      "price_to": 99,
+      "price_currency": "EUR",
+      "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/ZIO1F9osyAY72SdUpms01A/o.jpg",
+      "sponsored": true,
+      "verified": true,
+      "unknown": true,
+      "sources": [
+        "yelp"
+      ],
+      "last_verified": "2026-06-13T17:57:18Z",
+      "stale": false
+    },
+    {
+      "id": 16,
+      "name": "Clinica Veterinaria Santa Pau",
+      "category": "veterinario",
+      "label": "Veterinario",
+      "schema_type": "LocalBusiness",
+      "city": "valencia",
+      "address": {
+        "street": "Carrer de Francisco Martínez, 1, 46020 Valencia, Spain",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.488758,
+        "lng": -0.360161
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 3
+      },
+      "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/xlyJZPIOuFitfF6EGoKx9w/o.jpg",
+      "sponsored": true,
+      "verified": true,
+      "unknown": true,
+      "sources": [
+        "yelp"
+      ],
+      "last_verified": "2026-06-13T17:57:18Z",
+      "stale": false
+    },
+    {
+      "id": 12,
+      "name": "Clínica Veterinaria El Carmen",
+      "category": "veterinario",
+      "label": "Veterinario",
+      "schema_type": "LocalBusiness",
+      "city": "valencia",
+      "address": {
+        "street": "Plaça de Vicent Iborra, 4, 46003 Valencia, Spain",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.47682738,
+        "lng": -0.38152009
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 3
+      },
+      "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/6q9-EXc7SEM6Iq7Fm5WIoA/o.jpg",
+      "sponsored": true,
+      "verified": true,
+      "unknown": true,
+      "sources": [
+        "yelp"
+      ],
+      "last_verified": "2026-06-13T17:57:18Z",
+      "stale": false
+    },
+    {
+      "id": 28,
+      "name": "Clinica Veterinaria Añó",
+      "category": "veterinario",
+      "label": "Veterinario",
+      "schema_type": "LocalBusiness",
+      "city": "torres-de-serrano",
+      "address": {
+        "street": "Carrer Conde de Trenor, 4, 46003 Torres de Serrano, Spain",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.47931,
+        "lng": -0.3755
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 2
+      },
+      "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/qaodSuVW3u8gBCcz2NhC6g/o.jpg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": true,
+      "sources": [
+        "yelp"
+      ],
+      "last_verified": "2026-06-13T17:57:18Z",
+      "stale": false
+    },
+    {
+      "id": 30,
+      "name": "MisterGuau",
+      "category": "veterinario",
+      "label": "Veterinario",
+      "schema_type": "LocalBusiness",
+      "city": "valencia",
+      "address": {
+        "street": "Carrer del Conde de Salvatierra de Alava, 7, 46004 Valencia, Spain",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.4708237,
+        "lng": -0.368863
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 2
+      },
+      "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/drCW9cjEmUu7zgAvwWI5pw/o.jpg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": true,
+      "sources": [
+        "yelp"
+      ],
+      "last_verified": "2026-06-13T17:57:18Z",
+      "stale": false
+    },
+    {
+      "id": 33,
+      "name": "Cacopoulos",
+      "category": "veterinario",
+      "label": "Veterinario",
+      "schema_type": "LocalBusiness",
+      "city": "valencia",
+      "address": {
+        "street": "Plaça de Polo de Bernabé, 6, 46010 Valencia, Spain",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.4748,
+        "lng": -0.3628
+      },
+      "rating": {
+        "value": 4,
+        "review_count": 2
+      },
+      "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/d12sZYfvMc9o9RZTPb3cJw/o.jpg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": true,
+      "sources": [
+        "yelp"
+      ],
+      "last_verified": "2026-06-13T17:57:18Z",
+      "stale": false
+    },
+    {
+      "id": 63,
+      "name": "Més Blanc",
+      "category": "lavanderia",
+      "label": "Lavandería",
+      "schema_type": "LocalBusiness",
+      "city": "valencia",
+      "address": {
+        "street": "Plaça de Vicent Iborra, 3, 46003 Valencia, Spain",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.4768397,
+        "lng": -0.3813971
+      },
+      "rating": {
+        "value": 4,
+        "review_count": 2
+      },
+      "price_from": 10,
+      "price_to": 99,
+      "price_currency": "EUR",
+      "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/KLk5dN-NMnjnk4O1YSySog/o.jpg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": true,
+      "sources": [
+        "yelp"
+      ],
+      "last_verified": "2026-06-13T17:57:18Z",
+      "stale": false
+    },
+    {
+      "id": 62,
+      "name": "Tintorería Bremen",
+      "category": "lavanderia",
+      "label": "Lavandería",
+      "schema_type": "LocalBusiness",
+      "city": "valencia",
+      "address": {
+        "street": "Carrer del Conde de Altea, 8, 46005 Valencia, Spain",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.4652,
+        "lng": -0.36976
+      },
+      "rating": {
+        "value": 4,
+        "review_count": 2
+      },
+      "price_from": 10,
+      "price_to": 99,
+      "price_currency": "EUR",
+      "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/5GRUBuF9aFQ5vuvS2OLRkQ/o.jpg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": true,
+      "sources": [
+        "yelp"
+      ],
+      "last_verified": "2026-06-13T17:57:18Z",
+      "stale": false
+    },
+    {
+      "id": 21,
+      "name": "Veterinos",
+      "category": "veterinario",
+      "label": "Veterinario",
+      "schema_type": "LocalBusiness",
+      "city": "valencia",
+      "address": {
+        "street": "Carrer de Russafa, 33, 46005 Valencia, Spain",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.4644814,
+        "lng": -0.37327
+      },
+      "rating": {
+        "value": 4,
+        "review_count": 2
+      },
+      "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/6ho3lbNiIgZtrTUvWCjVZg/o.jpg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": true,
+      "sources": [
+        "yelp"
+      ],
+      "last_verified": "2026-06-13T17:57:18Z",
+      "stale": false
+    },
+    {
+      "id": 44,
+      "name": "Gaspar Aguilar",
+      "category": "veterinario",
+      "label": "Veterinario",
+      "schema_type": "LocalBusiness",
+      "city": "valencia",
+      "address": {
+        "street": "Carrer del Pintor Cortina, 3, 46017 Valencia, Spain",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.4541588,
+        "lng": -0.39238
+      },
+      "rating": {
+        "value": 4,
+        "review_count": 1
+      },
+      "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/0XWVgv6g3IgkGCNq-WPPfQ/o.jpg",
+      "sponsored": true,
+      "verified": true,
+      "unknown": true,
+      "sources": [
+        "yelp"
+      ],
+      "last_verified": "2026-06-13T17:57:18Z",
+      "stale": false
+    },
+    {
+      "id": 69,
+      "name": "KWL Seco",
+      "category": "lavanderia",
+      "label": "Lavandería",
+      "schema_type": "LocalBusiness",
+      "city": "valencia",
+      "address": {
+        "street": "Avinguda del  Primado Reig, 151, 46020 Valencia, Spain",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.48228,
+        "lng": -0.36047
+      },
+      "rating": {
+        "value": 4,
+        "review_count": 1
+      },
+      "price_from": 100,
+      "price_to": 999,
+      "price_currency": "EUR",
+      "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/KnynPBPl777xTZFw8uzM4A/o.jpg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": true,
+      "sources": [
+        "yelp"
+      ],
+      "last_verified": "2026-06-13T17:57:18Z",
+      "stale": false
+    },
+    {
+      "id": 65,
+      "name": "La Costurera",
+      "category": "lavanderia",
+      "label": "Lavandería",
+      "schema_type": "LocalBusiness",
+      "city": "valencia",
+      "address": {
+        "street": "Carrer de Ciscar, 32, 46005 València, Spain",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.4654503,
+        "lng": -0.36533
+      },
+      "rating": {
+        "value": 4,
+        "review_count": 1
+      },
+      "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/zA1ra0iLAmCr6wELXFZ_Hw/o.jpg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": true,
+      "sources": [
+        "yelp"
+      ],
+      "last_verified": "2026-06-13T17:57:18Z",
+      "stale": false
+    },
+    {
+      "id": 81,
+      "name": "Rapi Sec",
+      "category": "lavanderia",
+      "label": "Lavandería",
+      "schema_type": "LocalBusiness",
+      "city": "valencia",
+      "address": {
+        "street": "Carrer de Pedro Aleixandre, 2, 46006 Valencia, Spain",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.4612007,
+        "lng": -0.3648
+      },
+      "rating": {
+        "value": 4,
+        "review_count": 1
+      },
+      "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/IXxRsc6X1MKGrZrlqusiFg/o.jpg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": true,
+      "sources": [
+        "yelp"
+      ],
+      "last_verified": "2026-06-13T17:57:18Z",
+      "stale": false
+    },
+    {
+      "id": 49,
+      "name": "Sergio Jordá Bermell",
+      "category": "veterinario",
+      "label": "Veterinario",
+      "schema_type": "LocalBusiness",
+      "city": "valencia",
+      "address": {
+        "street": "Carrer de Torrent, 29, 46014 Valencia, Spain",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.46167,
+        "lng": -0.40152
+      },
+      "rating": {
+        "value": 4,
+        "review_count": 1
+      },
+      "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/V-DQ33NvSyyQuDd4g3eHdw/o.jpg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": true,
+      "sources": [
+        "yelp"
+      ],
+      "last_verified": "2026-06-13T17:57:18Z",
+      "stale": false
+    },
+    {
+      "id": 85,
+      "name": "Tricar",
+      "category": "lavanderia",
+      "label": "Lavandería",
+      "schema_type": "LocalBusiness",
+      "city": "valencia",
+      "address": {
+        "street": "Carrer Pintor Benedito, 10, 46007 Valencia, Spain",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.465889,
+        "lng": -0.38322
+      },
+      "rating": {
+        "value": 4,
+        "review_count": 1
+      },
+      "price_from": 10,
+      "price_to": 99,
+      "price_currency": "EUR",
+      "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/hh3jk0RJy4XcGfDcwbjxuQ/o.jpg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": true,
+      "sources": [
+        "yelp"
+      ],
+      "last_verified": "2026-06-13T17:57:18Z",
+      "stale": false
+    }
+  ],
+  "total": 98,
+  "limit": 20,
+  "offset": 0
+}

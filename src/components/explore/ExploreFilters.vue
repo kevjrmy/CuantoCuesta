@@ -94,7 +94,7 @@ const props = defineProps({
 
 const emit = defineEmits(['close', 'clear', 'update:filters'])
 
-const sourceKeys = ['booksy', 'treatwell']
+const sourceKeys = ['booksy', 'supabase', 'yelp']
 
 const sortOptions = [
   { value: 'price-asc', label: 'Price', icon: IconMdiChevronUp },

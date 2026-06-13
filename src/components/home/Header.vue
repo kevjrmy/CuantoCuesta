@@ -98,7 +98,7 @@ watch(searchQuery, (newVal) => {
 
   debounceTimer = setTimeout(async () => {
     try {
-      const url = `${API_BASE}/v1/businesses?city=valencia&q=${encodeURIComponent(newVal)}&limit=4`
+      const url = `${API_BASE}/v1/grooming/businesses?city=valencia&q=${encodeURIComponent(newVal)}&limit=4`
       const res = await fetch(url)
       if (!res.ok) throw new Error(`API error ${res.status}`)
       const data = await res.json()

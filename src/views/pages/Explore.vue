@@ -8,7 +8,7 @@
           <input
             v-model="searchQuery"
             type="search"
-            placeholder="Buscar negocio..."
+            placeholder="Search business..."
             class="search-input"
             @input="onSearch"
           />
@@ -25,13 +25,13 @@
       </header>
 
       <div v-if="!loading && filteredItems.length > 0" class="results-count">
-        {{ filteredItems.length }} resultado{{ filteredItems.length !== 1 ? 's' : '' }}
+        {{ filteredItems.length }} result{{ filteredItems.length !== 1 ? 's' : '' }}
       </div>
 
       <div class="items-list">
         <div v-if="loading" class="loading-state">
           <div class="spinner" />
-          <p>Buscando...</p>
+          <p>Searching...</p>
         </div>
 
         <template v-else-if="filteredItems.length > 0">
@@ -46,9 +46,9 @@
 
         <div v-else class="empty-state">
           <div class="empty-icon">🔍</div>
-          <h3>Sin resultados</h3>
-          <p>Prueba a cambiar los filtros</p>
-          <button @click="clearAll" class="reset-btn">Limpiar todo</button>
+          <h3>No results</h3>
+          <p>Try adjusting your filters</p>
+          <button @click="clearAll" class="reset-btn">Clear all</button>
         </div>
       </div>
 
@@ -90,21 +90,25 @@ const filters = reactive({
   sortBy: 'price-asc'
 })
 
-const buildUrl = () => {
+const buildParams = () => {
   const params = new URLSearchParams({ city: 'valencia', limit: '100' })
   if (filters.category) params.set('category', filters.category)
   if (filters.minRating > 0) params.set('min_rating', String(filters.minRating))
   if (searchQuery.value.trim()) params.set('q', searchQuery.value.trim())
-  return `${API_BASE}/v1/businesses?${params}`
+  return params
 }
 
 const fetchItems = async () => {
   loading.value = true
   try {
-    const res = await fetch(buildUrl())
-    if (!res.ok) throw new Error(`API error ${res.status}`)
-    const data = await res.json()
-    allItems.value = data.items ?? []
+    const params = buildParams()
+    const [groomingRes, vetsRes] = await Promise.all([
+      fetch(`${API_BASE}/v1/grooming/businesses?${params}`),
+      fetch(`${API_BASE}/v1/businesses?${params}`)
+    ])
+    const groomingData = groomingRes.ok ? await groomingRes.json() : { items: [] }
+    const vetsData = vetsRes.ok ? await vetsRes.json() : { items: [] }
+    allItems.value = [...(groomingData.items ?? []), ...(vetsData.items ?? [])]
   } catch (err) {
     console.error('[Explore] Failed to load businesses:', err)
     allItems.value = []

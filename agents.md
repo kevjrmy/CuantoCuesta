@@ -107,6 +107,8 @@ src/
       Toast.vue
   data/
     cuanto_cuesta.json        ← mock data, kept for reference/fallback
+    grooming.json             ← mock data for grooming vertical (/v1/grooming/businesses)
+    vets.json                 ← mock data for general/vets vertical (/v1/businesses)
   layouts/
     AltLayout.vue
     DefaultLayout.vue
@@ -187,6 +189,11 @@ const API_BASE = import.meta.env.VITE_API_BASE ?? ''
 // → VITE_API_BASE is intentionally empty in .env
 // → In dev: Vite proxy forwards /v1/... to Cloud Run
 // → In prod: same-origin Go server handles /v1/...
+
+// Grooming vertical (barbershops, nail salons, tattoo shops, beauty):
+fetch(`${API_BASE}/v1/grooming/businesses?city=valencia&limit=100`)
+
+// General / vets vertical:
 fetch(`${API_BASE}/v1/businesses?city=valencia&limit=100`)
 ```
 
@@ -194,9 +201,17 @@ Never hardcode the Cloud Run URL in component code — it only lives in `vite.co
 
 ### Key endpoints
 
+#### Grooming vertical
+
 | Endpoint | Description |
 |---|---|
-| `GET /v1/businesses` | List/search with filters (category, city, q, min_rating, geo, pagination) |
+| `GET /v1/grooming/businesses` | List/search grooming businesses (barbershops, nail salons, tattoo shops, beauty salons) with filters (category, city, q, min_rating, pagination) |
+
+#### General / vets vertical
+
+| Endpoint | Description |
+|---|---|
+| `GET /v1/businesses` | List/search general businesses (vets, laundries, etc.) with filters (category, city, q, min_rating, geo, pagination) |
 | `GET /v1/businesses/{id}` | Full business detail (with ETag caching) |
 | `GET /v1/businesses/{id}/services` | Service menu per business |
 | `GET /v1/businesses/{id}/reviews` | Sample reviews per business |

@@ -27,7 +27,7 @@ const handleSelectItem = (item) => {
 
 onMounted(async () => {
   try {
-    const url = `${API_BASE}/v1/businesses?city=valencia&limit=100`
+    const url = `${API_BASE}/v1/grooming/businesses?city=valencia&limit=100`
     console.log('[Home] Fetching:', url)
     const res = await fetch(url)
     if (!res.ok) throw new Error(`API error ${res.status}`)
