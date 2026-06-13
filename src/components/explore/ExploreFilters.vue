@@ -11,8 +11,7 @@
           <div class="filter-group">
             <label>Category</label>
             <div class="pill-grid">
-              <button v-for="cat in categories" :key="cat"
-                @click="updateFilter('category', cat)"
+              <button v-for="cat in categories" :key="cat" @click="updateFilter('category', cat)"
                 :class="['pill-btn', { active: filters.category === cat }]">
                 {{ getCategoryName(cat) }}
               </button>
@@ -41,8 +40,7 @@
           <div class="filter-group">
             <label>Platform</label>
             <div class="pill-grid">
-              <button v-for="src in sourceKeys" :key="src"
-                @click="updateFilter('source', src)"
+              <button v-for="src in sourceKeys" :key="src" @click="updateFilter('source', src)"
                 :class="['pill-btn', { active: filters.source === src }]">
                 {{ capitalize(src) }}
               </button>
@@ -64,8 +62,7 @@
           <div class="filter-group">
             <label>Sort by</label>
             <div class="pill-grid">
-              <button v-for="opt in sortOptions" :key="opt.value"
-                @click="updateFilter('sortBy', opt.value)"
+              <button v-for="opt in sortOptions" :key="opt.value" @click="updateFilter('sortBy', opt.value)"
                 :class="['pill-btn', { active: filters.sortBy === opt.value }]">
                 {{ opt.label }}
               </button>
@@ -95,7 +92,6 @@ const emit = defineEmits(['close', 'clear', 'update:filters'])
 const sourceKeys = ['booksy', 'treatwell']
 
 const sortOptions = [
-  { value: '', label: 'Default' },
   { value: 'price-asc', label: 'Price ↑' },
   { value: 'price-desc', label: 'Price ↓' },
   { value: 'rating-desc', label: 'Rating' }
@@ -170,6 +166,7 @@ const updateFilter = (key, value) => {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -248,6 +245,7 @@ const updateFilter = (key, value) => {
   color: var(--text-dark);
   outline: none;
   -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 .price-input::-webkit-outer-spin-button,
@@ -301,7 +299,8 @@ const updateFilter = (key, value) => {
   border-top: 1px solid var(--border-light);
 }
 
-.btn-secondary, .btn-primary {
+.btn-secondary,
+.btn-primary {
   flex: 1;
   padding: var(--space-sm);
   border-radius: var(--radius-md);

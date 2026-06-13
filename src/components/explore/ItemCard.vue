@@ -5,12 +5,12 @@
       <div v-else class="card-img-placeholder">
         <icon-mdi-store-outline />
       </div>
-      <span v-if="item.sponsored" class="badge badge-sponsored">Patrocinado</span>
+      <img v-if="item.logo_url" :src="item.logo_url" class="card-logo" loading="lazy" alt="" />
     </div>
 
     <div class="card-body">
       <div class="card-top">
-        <div class="card-category">{{ formatCategory(item.category) }}</div>
+        <div class="card-category">{{ item.label || formatCategory(item.category) }}</div>
         <div v-if="item.rating" class="card-rating">
           <icon-mdi-star class="star-icon" />
           <span>{{ item.rating.value.toFixed(1) }}</span>
@@ -18,12 +18,29 @@
         </div>
       </div>
 
-      <h3 class="card-name">{{ item.name }}</h3>
+      <div class="name-row">
+        <h3 class="card-name">{{ item.name }}</h3>
+        <icon-mdi-check-decagram v-if="item.verified || item.sponsored" class="verified-badge" aria-label="Verified" />
+      </div>
 
       <div class="card-footer">
-        <span v-if="item.price_range" class="card-price">{{ item.price_range }}</span>
+        <div v-if="item.price_from != null || item.price_to != null" class="card-main-price">
+          <span v-if="item.price_from != null && item.price_to == null" class="from-label">Desde</span>
+          <span v-else-if="item.price_to != null && item.price_from == null" class="from-label">Hasta</span>
+          <span class="price-value">
+            <template v-if="item.price_from != null && item.price_to != null && item.price_from !== item.price_to">
+              {{ item.price_from }}€ - {{ item.price_to }}€
+            </template>
+            <template v-else>
+              {{ item.price_from ?? item.price_to }}€
+            </template>
+          </span>
+        </div>
         <div class="card-sources">
-          <span v-for="src in item.sources" :key="src" class="source-tag">{{ capitalize(src) }}</span>
+          <span v-for="src in item.sources" :key="src" :class="['source-tag', `source-tag--${src}`]">
+            <icon-arcticons-booksy v-if="src === 'booksy'" class="source-icon" />
+            {{ capitalize(src) }}
+          </span>
         </div>
       </div>
     </div>
@@ -93,23 +110,21 @@ const capitalize = (str) => str ? str.charAt(0).toUpperCase() + str.slice(1) : '
   color: var(--text-muted);
 }
 
-.badge {
+.card-logo {
   position: absolute;
   bottom: 4px;
-  left: 4px;
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  padding: 2px 5px;
-  border-radius: var(--radius-sm);
-  line-height: 1.3;
+  right: 4px;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--surface-elevated);
+  object-fit: cover;
+  background: var(--surface-primary);
+  z-index: 2;
+  box-shadow: var(--shadow-xs);
 }
 
-.badge-sponsored {
-  background: var(--clr-neutral-light);
-  color: var(--clr-neutral);
-}
+
 
 /* ── Body ── */
 .card-body {
@@ -155,6 +170,12 @@ const capitalize = (str) => str ? str.charAt(0).toUpperCase() + str.slice(1) : '
   font-weight: 400;
 }
 
+.name-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 .card-name {
   font-size: var(--text-sm);
   font-weight: 700;
@@ -165,6 +186,12 @@ const capitalize = (str) => str ? str.charAt(0).toUpperCase() + str.slice(1) : '
   line-height: 1.3;
 }
 
+.verified-badge {
+  color: var(--clr-primary, #1da1f2); /* Twitter-like blue if primary differs */
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
 .card-footer {
   display: flex;
   align-items: center;
@@ -173,11 +200,32 @@ const capitalize = (str) => str ? str.charAt(0).toUpperCase() + str.slice(1) : '
   margin-top: 2px;
 }
 
-.card-price {
+.card-main-price {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.from-label {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.price-value {
   font-size: var(--text-sm);
   font-weight: 700;
   color: var(--text-dark);
   font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.full-range {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
 }
 
 .card-sources {
@@ -186,12 +234,24 @@ const capitalize = (str) => str ? str.charAt(0).toUpperCase() + str.slice(1) : '
 }
 
 .source-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   font-size: 0.65rem;
   font-weight: 600;
   color: var(--text-light);
   background: var(--surface-tertiary);
   border-radius: var(--radius-sm);
   padding: 2px 6px;
+}
+
+.source-tag--booksy {
+  background: #00d2d3;
+  color: #fff;
+}
+
+.source-icon {
+  font-size: 1.2em;
 }
 
 /* ── Chevron ── */

@@ -133,10 +133,11 @@ The basic structure of a business/item record (`BusinessSummary` schema):
 
 ```json
 {
-  "id": 1,
-  "name": "Classic barber shop",
-  "category": "barberia",
-  "schema_type": "HairSalon",
+  "id": 86,
+  "name": "Andymer Tattoo",
+  "category": "tienda-de-tatuajes",
+  "label": "Tatuajes",
+  "schema_type": "HealthAndBeautyBusiness",
   "description": "...",
   "city": "valencia",
   "address": {
@@ -146,17 +147,17 @@ The basic structure of a business/item record (`BusinessSummary` schema):
     "country": "es"
   },
   "location": { "lat": 39.46, "lng": -0.37 },
-  "rating": { "value": 4.8, "review_count": 67 },
-  "price_range": "EUR 5 - 18",
-  "price_from": 5,
-  "price_to": 18,
+  "rating": { "value": 5, "review_count": 13 },
+  "price_from": 60,
+  "price_to": 150,
   "price_currency": "EUR",
   "image_url": "...",
   "logo_url": "...",
-  "sponsored": false,
+  "sponsored": true,
   "verified": true,
+  "unknown": false,
   "sources": ["booksy"],
-  "last_verified": "2026-06-12T22:21:24Z",
+  "last_verified": "2026-06-13T10:42:58Z",
   "stale": false
 }
 ```

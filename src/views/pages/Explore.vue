@@ -128,8 +128,10 @@ const categoryKeys = computed(() => {
 
 const categoryNames = computed(() => {
   const names = {}
-  for (const cat of categoryKeys.value) {
-    names[cat] = cat.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+  for (const item of allItems.value) {
+    if (item.category && !names[item.category]) {
+      names[item.category] = item.label || item.category.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+    }
   }
   return names
 })
@@ -155,18 +157,12 @@ const filteredItems = computed(() => {
   if (filters.source) {
     result = result.filter(item => item.sources?.includes(filters.source))
   }
-  if (filters.sortBy) {
-    switch (filters.sortBy) {
-      case 'price-asc':
-        result.sort((a, b) => (a.price_from || 0) - (b.price_from || 0))
-        break
-      case 'price-desc':
-        result.sort((a, b) => (b.price_from || 0) - (a.price_from || 0))
-        break
-      case 'rating-desc':
-        result.sort((a, b) => (b.rating?.value || 0) - (a.rating?.value || 0))
-        break
-    }
+  if (!filters.sortBy || filters.sortBy === 'price-asc') {
+    result.sort((a, b) => (a.price_from || 0) - (b.price_from || 0))
+  } else if (filters.sortBy === 'price-desc') {
+    result.sort((a, b) => (b.price_from || 0) - (a.price_from || 0))
+  } else if (filters.sortBy === 'rating-desc') {
+    result.sort((a, b) => (b.rating?.value || 0) - (a.rating?.value || 0))
   }
   return result
 })

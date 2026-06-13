@@ -18,12 +18,15 @@
       </button>
 
       <div v-if="business" class="hero-meta">
-        <span class="hero-category">{{ formatCategory(business.category) }}</span>
-        <h1 class="hero-title">{{ business.name }}</h1>
-        <div class="hero-rating" v-if="business.rating">
-          <icon-mdi-star class="star-icon" />
-          <span>{{ business.rating.value.toFixed(1) }}</span>
-          <span class="review-count">· {{ business.rating.review_count }} reseñas</span>
+        <img v-if="business.logo_url" :src="business.logo_url" class="hero-logo" alt="" />
+        <div class="hero-meta-text">
+          <span class="hero-category">{{ business.label || formatCategory(business.category) }}</span>
+          <h1 class="hero-title">{{ business.name }}</h1>
+          <div class="hero-rating" v-if="business.rating">
+            <icon-mdi-star class="star-icon" />
+            <span>{{ business.rating.value.toFixed(1) }}</span>
+            <span class="review-count">· {{ business.rating.review_count }} reseñas</span>
+          </div>
         </div>
       </div>
     </div>
@@ -49,11 +52,27 @@
       <div class="stats-row">
         <div class="stat-chip">
           <icon-mdi-currency-eur />
-          <span>{{ business.price_range ?? '—' }}</span>
+          <span v-if="business.price_from != null && business.price_to != null && business.price_from !== business.price_to">
+            {{ business.price_from }} - {{ business.price_to }}
+          </span>
+          <span v-else-if="business.price_from != null">
+            Desde {{ business.price_from }}
+          </span>
+          <span v-else-if="business.price_to != null">
+            Hasta {{ business.price_to }}
+          </span>
+          <span v-else-if="business.price_range">
+            {{ business.price_range }}
+          </span>
+          <span v-else>—</span>
         </div>
         <div v-if="business.address?.locality" class="stat-chip">
           <icon-mdi-map-marker-outline />
           <span>{{ business.address.locality }}</span>
+        </div>
+        <div v-if="business.last_verified" class="stat-chip">
+          <icon-mdi-clock-outline />
+          <span>{{ formatDate(business.last_verified) }}</span>
         </div>
         <div v-if="business.verified" class="stat-chip stat-chip--verified">
           <icon-mdi-check-decagram />
@@ -79,6 +98,12 @@
               <template v-if="svc.price != null">
                 {{ svc.currency === 'EUR' ? '€' : svc.currency }}{{ svc.price.toFixed(0) }}
               </template>
+              <template v-else-if="svc.price_from != null && svc.price_to != null && svc.price_from !== svc.price_to">
+                {{ svc.price_from }}€ - {{ svc.price_to }}€
+              </template>
+              <template v-else-if="svc.price_from != null">
+                Desde {{ svc.price_from }}€
+              </template>
               <template v-else-if="svc.price_range">
                 {{ svc.price_range }}
               </template>
@@ -92,7 +117,8 @@
       <section v-if="business.sources?.length" class="section">
         <h2 class="section-title">Disponible en</h2>
         <div class="source-pills">
-          <span v-for="src in business.sources" :key="src" class="source-pill">
+          <span v-for="src in business.sources" :key="src" :class="['source-pill', `source-pill--${src}`]">
+            <icon-arcticons-booksy v-if="src === 'booksy'" class="source-icon" />
             {{ capitalize(src) }}
           </span>
         </div>
@@ -130,6 +156,15 @@ const formatCategory = (cat) => {
 }
 
 const capitalize = (str) => str ? str.charAt(0).toUpperCase() + str.slice(1) : ''
+
+const formatDate = (dateStr) => {
+  if (!dateStr) return ''
+  const d = new Date(dateStr)
+  const dd = String(d.getDate()).padStart(2, '0')
+  const mm = String(d.getMonth() + 1).padStart(2, '0')
+  const yy = String(d.getFullYear()).slice(-2)
+  return `${dd}/${mm}/${yy}`
+}
 
 const fetchAll = async () => {
   loading.value = true
@@ -219,6 +254,25 @@ onMounted(fetchAll)
   right: 0;
   padding: var(--space-md) var(--space-md) var(--space-lg);
   z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-md);
+}
+
+.hero-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-md);
+  border: 2px solid #fff;
+  object-fit: cover;
+  background: #fff;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.hero-meta-text {
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-category {
@@ -288,8 +342,8 @@ onMounted(fetchAll)
 }
 
 .stat-chip--verified {
-  background: var(--clr-success-light);
-  color: var(--clr-success);
+  background: var(--clr-primary-light);
+  color: var(--clr-primary);
   border-color: transparent;
 }
 
@@ -368,6 +422,9 @@ onMounted(fetchAll)
 }
 
 .source-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   padding: var(--space-sm) var(--space-md);
   background: var(--surface-elevated);
   border: 1px solid var(--border-default);
@@ -375,6 +432,16 @@ onMounted(fetchAll)
   font-size: var(--text-sm);
   font-weight: 600;
   color: var(--text-medium);
+}
+
+.source-pill--booksy {
+  background: #00d2d3;
+  color: #fff;
+  border-color: transparent;
+}
+
+.source-icon {
+  font-size: 1.2em;
 }
 
 /* ── Address ── */

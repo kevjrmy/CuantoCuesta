@@ -1,0 +1,724 @@
+{
+  "items": [
+    {
+      "id": 86,
+      "name": "Andymer Tattoo",
+      "category": "tienda-de-tatuajes",
+      "label": "Tatuajes",
+      "schema_type": "HealthAndBeautyBusiness",
+      "description": "Estudio de tatuajes de línea fina, un espacio seguro donde crear tu diseño perfecto es mi objetivo principal!",
+      "city": "valencia",
+      "address": {
+        "street": "Gran Vía de las Germanías, 30, Centro Sara Stamenovic, 46006, Valencia",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46006",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.46391532725986,
+        "lng": -0.3769543594612969
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 13
+      },
+      "price_from": 60,
+      "price_to": 150,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/119788/biz_photo/4f1ca6a3a9e443afbb9a13d580a19c-andymer-tattoo-biz-photo-bf12d393482c4c05ac2dc2c97bb2fe-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/119788/logo/b3a19ab815e346828a7e42153b51d5-andymer-tattoo-logo-79c7d6037df74b7eb0f742ce76a9f6-booksy.jpeg",
+      "sponsored": true,
+      "verified": true,
+      "unknown": false,
+      "sources": [
+        "booksy"
+      ],
+      "last_verified": "2026-06-13T10:42:58Z",
+      "stale": false
+    },
+    {
+      "id": 80,
+      "name": "Frank Barbery",
+      "category": "barberia",
+      "label": "Barbería",
+      "schema_type": "HairSalon",
+      "description": "Check out Frank Barbery in Valencia - explore pricing, reviews, and open appointments online 24/7!",
+      "city": "valencia",
+      "address": {
+        "street": "Calle de Císcar, 30, Valencia, 46005, Valencia",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46005",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.4657400063595,
+        "lng": -0.36562000000000694
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 232
+      },
+      "price_from": 15,
+      "price_to": 30,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/119083/biz_photo/884b47fbd8c64894877247925c62ea-frank-barbery-biz-photo-91375de0ae8b483bb38da580fd04f8-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/119083/logo/7a0f972069ba4ed3a13a0bcf358f87-frank-barbery-logo-5d7b5476167a4300ba9252c84d3e0a-booksy.jpeg",
+      "sponsored": true,
+      "verified": true,
+      "unknown": false,
+      "sources": [
+        "booksy"
+      ],
+      "last_verified": "2026-06-13T10:42:56Z",
+      "stale": false
+    },
+    {
+      "id": 81,
+      "name": "COLLECTIVE ART COWORKING",
+      "category": "servicios-profesionales",
+      "label": "Servicios profesionales",
+      "schema_type": "LocalBusiness",
+      "description": "Collective es un multi espacio dedicado a la imagen personal, peluquería y maquillaje. Coworking para estilistas y maquilladores . Sala de eventos, estudio fotográfico y video contenido. Sala de procesos para productoras. Entrevistas, casting...",
+      "city": "valencia",
+      "address": {
+        "street": "Calle Obispo Jaime Pérez, 13 bajo, Montiolivete, 46006, Valencia",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46006",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.45915000635573,
+        "lng": -0.3661299999999983
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 128
+      },
+      "price_from": 20,
+      "price_to": 55,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/117831/biz_photo/f1a423961db34a809aa4f7efe51cb2-collective-by-irune-laca-biz-photo-39f4d182bb5847399dc1de0e4209e2-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/117831/logo/49446bdd8db64886a16666a1632f2f-collective-by-irune-laca-logo-81127149d4d7458894b928b69a592f-booksy.jpeg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": false,
+      "sources": [
+        "booksy"
+      ],
+      "last_verified": "2026-06-13T10:42:57Z",
+      "stale": false
+    },
+    {
+      "id": 110,
+      "name": "Barbería Norte",
+      "category": "barberia",
+      "label": "Barbería",
+      "schema_type": "HairSalon",
+      "description": "Check out Barbería Norte in Valencia - explore pricing, reviews, and open appointments online 24/7!",
+      "city": "valencia",
+      "address": {
+        "street": "Palleter, 20, 46008, Valencia",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46008",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.46933676,
+        "lng": -0.38635209
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 813
+      },
+      "price_from": 12,
+      "price_to": 20,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/19289/biz_photo/2b8f48d37bc7494e823c2e2db0110f-barberia-norte-biz-photo-843fc1f0169b4d748eeffc38ceb96e-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/19289/logo/53c1ad78c2ee46c0860e93099023e0-barberia-norte-logo-3997e56079934191b596c44d5bc56c-booksy.jpeg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": false,
+      "sources": [
+        "booksy"
+      ],
+      "last_verified": "2026-06-13T10:43:09Z",
+      "stale": false
+    },
+    {
+      "id": 96,
+      "name": "La Crew Barber Club - Tu Barbería en Ruzafa",
+      "category": "barberia",
+      "label": "Barbería",
+      "schema_type": "LocalBusiness",
+      "description": "Barberia clásica con conceptos actuales.\nCorte clásico, degradado, arreglo de barbas, afeitados.\n\nPreferiblemente PAGO en EFECTIVO.\n\n*Condiciones: La Inasistencia conllevara el pago del servicio y tiempo perdido para la siguiente reserva.",
+      "city": "valencia",
+      "address": {
+        "street": "Carrer de Sueca, 13, L'Eixample, 46006 València, Valencia, Spain",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46004",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.4628633,
+        "lng": -0.3758716
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 991
+      },
+      "price_from": 11,
+      "price_to": 11,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/12117/biz_photo/86a2cf3d01ec44d29c34804ea3efbd-la-crew-barber-club-tu-barberi-biz-photo-df189f0ec8be4d3f9dc366f5a5b7c6-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/12117/logo/33f8acdf841c4734b8f52e5556b7d9-la-crew-barber-club-tu-barberi-logo-a44510126c834df2b57ed692d681f5-booksy.jpeg",
+      "sponsored": true,
+      "verified": true,
+      "unknown": false,
+      "sources": [
+        "booksy",
+        "supabase"
+      ],
+      "last_verified": "2026-06-13T11:41:23Z",
+      "stale": false
+    },
+    {
+      "id": 69,
+      "name": "Diamond Studio By Oriana Realza",
+      "category": "cejas-y-pestanas",
+      "label": "Cejas y pestañas",
+      "schema_type": "HealthAndBeautyBusiness",
+      "description": "Hola hermosa! 🌟 Mi nombre es Oriana Realza y estoy aquí para realzar tu mirada, haciendo que tus cejas y pestañas luzcan radiantes y hermosas. Con 2 años de experiencia certificada, te invito a que vengas a mi precioso lugar de paz, donde podrás disfrutar de un ambiente tranquilo y acogedor.",
+      "city": "valencia",
+      "address": {
+        "street": "Calle del Pintor Maella, 3, Escalera D piso 12, 46023, Valencia",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46023",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.463374179744385,
+        "lng": -0.34644947597698894
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 53
+      },
+      "price_from": 18,
+      "price_to": 52,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/113581/biz_photo/4acb78104b6e4e74be22f28ce25802-diamond-studio-by-oriana-realz-biz-photo-9f1743949bc940358edd7e7c82ebfc-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/113581/logo/938e794ca1da43c9bff44e5e29795d-diamond-studio-by-oriana-realz-logo-4535ebaaf97f41c39f8d76109458e5-booksy.jpeg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": false,
+      "sources": [
+        "booksy"
+      ],
+      "last_verified": "2026-06-13T10:42:52Z",
+      "stale": false
+    },
+    {
+      "id": 112,
+      "name": "DM BARBER",
+      "category": "barberia",
+      "label": "Barbería",
+      "schema_type": "HairSalon",
+      "description": "Check out DM BARBER in Valencia - explore pricing, reviews, and open appointments online 24/7!",
+      "city": "valencia",
+      "address": {
+        "street": "Calle de Dénia, 12, 46006, Valencia",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46006",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.4634900063582,
+        "lng": -0.373530000000017
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 135
+      },
+      "price_from": 12,
+      "price_to": 35,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/20306/biz_photo/b8dc6d31232c48548756745ad6a6b0-dm-barber-biz-photo-d1083273949644be8427c3615f1885-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/20306/logo/533f9e7a596447efb0dab7ecf196b9-dm-barber-logo-929a0ff287ab49b2869923c5ecf5c3-booksy.jpeg",
+      "sponsored": true,
+      "verified": true,
+      "unknown": false,
+      "sources": [
+        "booksy"
+      ],
+      "last_verified": "2026-06-13T10:43:10Z",
+      "stale": false
+    },
+    {
+      "id": 116,
+      "name": "Blaze Barber Studio",
+      "category": "barberia",
+      "label": "Barbería",
+      "schema_type": "HairSalon",
+      "description": "Barbería de alta precisión 💈\nCortes clásicos ✂️ \nNuevas Tendencias 🔥",
+      "city": "valencia",
+      "address": {
+        "street": "Calle de la Marina Alta, 5, 46015, Valencia",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46015",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.490554844922,
+        "lng": -0.401788291829604
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 328
+      },
+      "price_from": 15,
+      "price_to": 20,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/20464/biz_photo/5abdefd84ff048f5b3d674eef39689-blaze-barber-studio-biz-photo-1010b77d1a594a39abd347acd7ab33-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/20464/logo/2b4ea1201f7541478cd4aa85e49f3a-blaze-barber-studio-logo-6b29e7746fb543feaf2598a5d53ca8-booksy.jpeg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": false,
+      "sources": [
+        "booksy"
+      ],
+      "last_verified": "2026-06-13T10:43:11Z",
+      "stale": false
+    },
+    {
+      "id": 126,
+      "name": "Espacio De Belleza Marien",
+      "category": "cuidado-de-la-piel",
+      "label": "Cuidado de la piel",
+      "schema_type": "BeautySalon",
+      "description": "Check out Espacio De Belleza Marien in Valencia - explore pricing, reviews, and open appointments online 24/7!",
+      "city": "valencia",
+      "address": {
+        "street": "Calle Aurora, 36, 46026, Valencia",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46026",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.42869,
+        "lng": -0.36453
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 88
+      },
+      "price_from": 16,
+      "price_to": 60,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/24500/biz_photo/3d6d195772874af09d939d09ab83da-espacio-de-belleza-marien-biz-photo-5ed9772578544ea7ad01c95a9b12ef-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/24500/logo/b8dd2f108b8f4c21ba27d0f674dcd3-espacio-de-belleza-marien-logo-e66e6bb3bc164964b24b9185b8d7b0-booksy.jpeg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": false,
+      "sources": [
+        "booksy"
+      ],
+      "last_verified": "2026-06-13T10:43:15Z",
+      "stale": false
+    },
+    {
+      "id": 117,
+      "name": "Elite Barbershop Gran Via",
+      "category": "barberia",
+      "label": "Barbería",
+      "schema_type": "HairSalon",
+      "description": "Barbería América de alta calidad \r\nWe speak English",
+      "city": "valencia",
+      "address": {
+        "street": "Gran vía Fernando el católico, 29, 46008, Valencia",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46008",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.47135177433126,
+        "lng": -0.38604735007789803
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 280
+      },
+      "price_from": 15,
+      "price_to": 25,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/20500/biz_photo/92dab8b739f94e39b1c17ba0ffa6c3-elite-barbershop-gran-via-biz-photo-df1ac5eb791c4677b5e938c38ddddf-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/20500/logo/5c85b1f65b8e4dbe9b0300d25e931b-elite-barbershop-gran-via-logo-d442c25db6f64a56bd971e2ab9c0dd-booksy.jpeg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": false,
+      "sources": [
+        "booksy"
+      ],
+      "last_verified": "2026-06-13T10:43:11Z",
+      "stale": false
+    },
+    {
+      "id": 70,
+      "name": "Raquel Reis Estética Avanzada",
+      "category": "masajes",
+      "label": "Masajes",
+      "schema_type": "HealthAndBeautyBusiness",
+      "description": "✨ Sobre mí\n\nHola, soy Raquel Reis, especialista en estética avanzada y cuidados postoperatorios con más de 8 años de experiencia. Trabajo con tratamientos seguros, personalizados y orientados a resultados visibles, siempre desde un enfoque profesional y responsable.\n\nCombino técnica médica, aparatología avanzada y sensibilidad estética, cuidando cada detalle para que te sientas bien por dentro y por fuera.\n\n💆‍♀️ Servicios principales\n\n✔️ Recuperación postoperatoria (drenaje linfático y terapias cicatriciales)\n✔️ Depilación láser profesional (apta para varios fototipos)\n✔️ Tratamientos faciales y corporales (radiofrecuencia, cavitación, peelings)\n✔️ Peeling de carbón, tratamientos despigmentantes y rejuvenecimiento\n✔️ Rellenos y toxina en colaboración con clínicas médicas\n\n🤍 Mi enfoque\n\nCreo en un cuidado integral y personalizado.\nLa estética brasileña es parte de mi filosofía: técnica, bienestar y prevención aplicados con rigor y cercanía para potenciar tu autoestima.\n\n🌸 Mi compromiso\n\n✨ Atención personalizada en cada cita\n✨ Protocolos seguros y actualizados\n✨ Valoración previa y plan adaptado a tus necesidades\n\n📅 Reserva tu cita y empezamos juntas tu tratamiento.\n\n Raquel Reis",
+      "city": "valencia",
+      "address": {
+        "street": "Calle de Motilla del Palancar, 33, bajo 3 dcha, Rascaña,  46019 Valencia, 46019, Valencia",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46019",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.49225,
+        "lng": -0.36699
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 57
+      },
+      "price_from": 25,
+      "price_to": 45,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/114129/biz_photo/e99ef49087034558999ce991ed40c9-raquel-reis-estetica-avanzada-biz-photo-1aa02260ca504410aaf5ca134a1943-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/114129/logo/79dd12dce4b442e5997e61b8d35915-raquel-reis-estetica-avanzada-logo-8571afa1e05b42c1a94ee755cde901-booksy.jpeg",
+      "sponsored": true,
+      "verified": true,
+      "unknown": false,
+      "sources": [
+        "booksy"
+      ],
+      "last_verified": "2026-06-13T10:42:52Z",
+      "stale": false
+    },
+    {
+      "id": 101,
+      "name": "BARBERIA MALAVITA",
+      "category": "barberia",
+      "label": "Barbería",
+      "schema_type": "HairSalon",
+      "description": "Servicios de peluquería, pelo y barba para caballeros, limpiezas faciales",
+      "city": "valencia",
+      "address": {
+        "street": "Calle Escultor José Capuz, 43, 46006, Valencia",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46006",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.45871,
+        "lng": -0.36048
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 45
+      },
+      "price_from": 6,
+      "price_to": 15,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/15365/biz_photo/ea285fc7f00e4db184113e3470a375-barberia-malavita-biz-photo-d3f8741daeb949a8958f228f40e06d-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/15365/logo/d5f0ca26996246718679364777a198-barberia-malavita-logo-dd13f5042bb84282bef6c1844e370d-booksy.jpeg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": false,
+      "sources": [
+        "booksy"
+      ],
+      "last_verified": "2026-06-13T10:43:05Z",
+      "stale": false
+    },
+    {
+      "id": 97,
+      "name": "Bloom Nails",
+      "category": "salon-de-unas",
+      "label": "Uñas",
+      "schema_type": "NailSalon",
+      "description": "Check out Bloom Nails in Valencia - explore pricing, reviews, and open appointments online 24/7!",
+      "city": "valencia",
+      "address": {
+        "street": "Calle Pintor Gisbert, 12, 46006, Valencia",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46006",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.46017,
+        "lng": -0.37675
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 453
+      },
+      "price_from": 25,
+      "price_to": 45,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/12350/biz_photo/2480797511c34fa58dfe574839f2d8-bloom-nails-biz-photo-23c66c7d537949f38dc5bba5d7a767-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/12350/logo/463365d866e94b6eaeaae1fe4f3a7b-bloom-nails-logo-0af6c21d12f74384927a02ecf4f248-booksy.jpeg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": false,
+      "sources": [
+        "booksy"
+      ],
+      "last_verified": "2026-06-13T10:43:04Z",
+      "stale": false
+    },
+    {
+      "id": 160,
+      "name": "Peluquería D\u0026J",
+      "category": "barberia",
+      "label": "Barbería",
+      "schema_type": "LocalBusiness",
+      "city": "valencia",
+      "address": {
+        "street": "C/ dels Centelles, 52, L'Eixample, 46006 València, Valencia, Spain",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.4586849,
+        "lng": -0.3750377
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 24
+      },
+      "price_from": 11,
+      "price_to": 11,
+      "price_currency": "EUR",
+      "sponsored": true,
+      "verified": true,
+      "unknown": true,
+      "sources": [
+        "supabase"
+      ],
+      "last_verified": "2026-06-13T11:41:23Z",
+      "stale": false
+    },
+    {
+      "id": 100,
+      "name": "Peluquería Estetica Freya Chic Concept",
+      "category": "peluqueria",
+      "label": "Peluquería",
+      "schema_type": "HairSalon",
+      "description": "Peluqueria  Estética Freya Chic    Concept\nBelleza ,cosmética y cuidado personal\n\n 💫Especialistas en alisados órganicos    taninoplastia, enzimoterapia,keratina, nanoplastia 🍀\n💫Especialistas en color,corte ✂️ mechas \n💫Especialistas en micropigmentación,🫦microblading ,microshading\n 💫 Especialistas en tratamientos faciales y corporales; dermapen, mesoterapia💉, maderoterapia, masajes relajantes💆🏻💆‍♂️\n💫Salón de uñas \n\n📲637606238\n📍Avd Burjassot 178 bajo Valencia España \n\nInstagram https://www.instagram.com/peluqueriafreya9957?igsh=MXNtMXd6dmJyZWltMg==",
+      "city": "valencia",
+      "address": {
+        "street": "Avenida de Burjasot 178, 178, 46025, Valencia",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46025",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.49210129,
+        "lng": -0.39298855
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 194
+      },
+      "price_from": 25,
+      "price_to": 65,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/15146/biz_photo/70831a0ba3c34eba96ddfe4c1b447c-peluqueria-freya-chic-concept-biz-photo-711439f2d8ea4845bef1ec5401ec01-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/15146/logo/cb54de38e6714ca592a2fb75ff2539-peluqueria-estetica-freya-chic-logo-97b23f765fdc43dcb20236281fc648-booksy.jpeg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": false,
+      "sources": [
+        "booksy"
+      ],
+      "last_verified": "2026-06-13T10:43:05Z",
+      "stale": false
+    },
+    {
+      "id": 98,
+      "name": "Barber Shop Valencia",
+      "category": "barberia",
+      "label": "Barbería",
+      "schema_type": "HairSalon",
+      "description": "Bienvenido a Barber Shop Valencia. Si quieres lucir un buen corte de pelo o tener una barba cuidada, pásate por nuestra barbería y disfruta de la experiencia de la peluquería para hombres.",
+      "city": "valencia",
+      "address": {
+        "street": "Carrer de Joan Llorenç, 18, 46008, València",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46008",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.4728061,
+        "lng": -0.3909294
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 469
+      },
+      "price_from": 12,
+      "price_to": 16,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/12979/biz_photo/a98e029f7f3548d9a4fee0e87ba0ad-barber-shop-valencia-biz-photo-447dcb0b36a64c1983c60a6b53cda7-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/12979/logo/72012fd0fdcd429eb51b2c4dd21177-barber-shop-valencia-logo-3bc4664be48c4bc0ae3f64dee855c3-booksy.jpeg",
+      "sponsored": true,
+      "verified": true,
+      "unknown": false,
+      "sources": [
+        "booksy"
+      ],
+      "last_verified": "2026-06-13T10:43:04Z",
+      "stale": false
+    },
+    {
+      "id": 137,
+      "name": "Brooklyn Barber Shop La Plata",
+      "category": "barberia",
+      "label": "Barbería",
+      "schema_type": "LocalBusiness",
+      "description": "Check out Brooklyn Barber Shop La Plata in Valencia - explore pricing, reviews, and open appointments online 24/7!",
+      "city": "valencia",
+      "address": {
+        "street": "C/ de la Fonteta de Sant Lluís, 46, Quatre Carreres, 46006 València, Valencia, Spain",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46006",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.4551883,
+        "lng": -0.3716458
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 1096
+      },
+      "price_from": 11,
+      "price_to": 11,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/29166/biz_photo/c070d6c7a58f46258f83cd2fa7bdb3-brooklyn-barber-shop-la-plata-biz-photo-58e6119d862640778f3c4dcbc9451c-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/29166/logo/193bfedd83ed43b18dc08fce52b9eb-brooklyn-barber-shop-la-plata-logo-af88bc5b9bfd41b68533e571be465e-booksy.jpeg",
+      "sponsored": true,
+      "verified": true,
+      "unknown": false,
+      "sources": [
+        "booksy",
+        "supabase"
+      ],
+      "last_verified": "2026-06-13T11:41:23Z",
+      "stale": false
+    },
+    {
+      "id": 114,
+      "name": "Extensiones Bernadette y Peluquería AFRO",
+      "category": "peluqueria",
+      "label": "Peluquería",
+      "schema_type": "HairSalon",
+      "description": "Check out Extensiones Bernadette y Peluquería AFRO in Valencia - explore pricing, reviews, and open appointments online 24/7!",
+      "city": "valencia",
+      "address": {
+        "street": "Calle Dolores Alcaide, 10, 46007, Valencia",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46007",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.45642,
+        "lng": -0.38544
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 50
+      },
+      "price_from": 28,
+      "price_to": 120,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/19359/biz_photo/f824329a76374ac891655aaddae490-extensiones-bernadette-y-peluq-biz-photo-574af578ceb24580a25fd2ce10f958-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/19359/logo/c73f4aa6b03f4162aca6771c2694af-extensiones-bernadette-y-peluq-logo-38643ee12a12469081b28f06bdb9bb-booksy.jpeg",
+      "sponsored": true,
+      "verified": true,
+      "unknown": false,
+      "sources": [
+        "booksy"
+      ],
+      "last_verified": "2026-06-13T10:43:10Z",
+      "stale": false
+    },
+    {
+      "id": 113,
+      "name": "Domiestetic",
+      "category": "cejas-y-pestanas",
+      "label": "Cejas y pestañas",
+      "schema_type": "HealthAndBeautyBusiness",
+      "description": "En DomiEstetic cuidamos cada detalle para realzar tu belleza natural. Somos un centro especializado en micropigmentación, tratamientos faciales y corporales, uñas, pestañas y depilación láser, ubicado en Av. del Primado Reig 105, Valencia.\nNuestro equipo combina técnica, profesionalidad y pasión para ofrecerte resultados visibles y duraderos en un ambiente cálido y relajante.\n\n✨ ¿Por qué escogernos?\n\nAtención personalizada y asesoramiento profesional.\n\nProductos de alta calidad y técnicas actualizadas.\n\nEspacio acogedor pensado para tu bienestar.\n\nResultados naturales que realzan tu belleza.\n\n\nReserva tu cita y vive la experiencia DomiEstetic: belleza, armonía y confianza en un solo lugar.",
+      "city": "valencia",
+      "address": {
+        "street": "Avenida del Primado Reig, 105, Domiestetic, 46020, Valencia",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46020",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.48596,
+        "lng": -0.36542
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 31
+      },
+      "price_from": 30,
+      "price_to": 120,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/19798/biz_photo/cee08c2eaf574743958c46a46d0cae-domiestetic-biz-photo-4e985f733ff2478f9db33de856a318-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/19798/logo/1e9454222b9e447e9eb66eff8bd68a-domiestetic-logo-ec034e0aaf24483b9c5ddd2790c7b3-booksy.jpeg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": false,
+      "sources": [
+        "booksy"
+      ],
+      "last_verified": "2026-06-13T10:43:10Z",
+      "stale": false
+    },
+    {
+      "id": 85,
+      "name": "DFLOWBARBER",
+      "category": "barberia",
+      "label": "Barbería",
+      "schema_type": "HairSalon",
+      "description": "Dflowbarber 💈nace en Valencia España🇪🇸 y llega con un estilo de trabajo diferente ofreciendo servicios personalizados para comodidad y satisfacción  de nuestros clientes y con la idea de mejorar cada día nuestros servicios para con ustedes gracias por darnos la oportunidad de conocerte un cordial saludo 🤗",
+      "city": "valencia",
+      "address": {
+        "street": "Avenida Juan XXIII, 35 Bajo, 46025, Valencia",
+        "locality": "Comunidad Valenciana",
+        "postal_code": "46025",
+        "country": "es"
+      },
+      "location": {
+        "lat": 39.493990039999964,
+        "lng": -0.3835800299999949
+      },
+      "rating": {
+        "value": 5,
+        "review_count": 59
+      },
+      "price_from": 6,
+      "price_to": 13,
+      "price_currency": "EUR",
+      "image_url": "https://d375139ucebi94.cloudfront.net/region2/es/119740/biz_photo/d4c34f1979e649688ac493e05780a0-dflowbarber-biz-photo-f3f859cfba574656b27b425d23a326-booksy.jpeg",
+      "logo_url": "https://d375139ucebi94.cloudfront.net/region2/es/119740/logo/70b8ef1c79da448bacdbe214d17108-dflowbarber-logo-faaca490b8ed44e581121b2fda2234-booksy.jpeg",
+      "sponsored": true,
+      "verified": false,
+      "unknown": false,
+      "sources": [
+        "booksy"
+      ],
+      "last_verified": "2026-06-13T10:42:58Z",
+      "stale": false
+    }
+  ],
+  "total": 92,
+  "limit": 20,
+  "offset": 0
+}

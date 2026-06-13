@@ -9,17 +9,13 @@
     <div ref="mapContainer" class="leaflet-map-element"></div>
 
     <div class="map-controls">
+      <MapControls @zoom-in="handleZoomIn" @zoom-out="handleZoomOut" />
       <button class="map-btn" @click="locateUser" aria-label="Mi ubicación">
         <icon-mdi-crosshairs-gps />
       </button>
     </div>
 
-    <div class="map-legend">
-      <div v-for="cat in categoryKeys" :key="cat" class="legend-item">
-        <span class="legend-dot" :style="{ backgroundColor: getCategoryColor(cat) }"></span>
-        <span class="legend-label">{{ formatCategoryLabel(cat) }}</span>
-      </div>
-    </div>
+    <MapLegend :items="items" />
 
     <BottomItem :item="selectedItem" @close="selectedItem = null" />
 
@@ -30,11 +26,13 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onBeforeUnmount, onActivated, nextTick, watch } from 'vue'
+import { ref, onMounted, onBeforeUnmount, onActivated, nextTick, watch } from 'vue'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import '@maplibre/maplibre-gl-leaflet'
 import BottomItem from './BottomItem.vue'
+import MapLegend from './MapLegend.vue'
+import MapControls from './MapControls.vue'
 
 const props = defineProps({
   items: { type: Array, required: true }
@@ -69,18 +67,7 @@ const CURRENCY_SYMBOLS = {
   GBP: '£'
 }
 
-const categoryKeys = computed(() => {
-  const seen = new Set()
-  props.items.forEach(item => seen.add(item.category))
-  return Array.from(seen)
-})
-
 const getCategoryColor = (category) => CATEGORY_COLORS[category] || FALLBACK_COLOR
-
-const formatCategoryLabel = (category) => {
-  if (!category) return ''
-  return category.replace(/-/g, ' ').replace(/^./, c => c.toUpperCase())
-}
 
 const formatMarkerPrice = (item) => {
   if (item.price_from == null) return '?'
@@ -152,6 +139,14 @@ const locateUser = () => {
     return
   }
   map.flyTo([userLocation.value.lat, userLocation.value.lng], 16)
+}
+
+const handleZoomIn = () => {
+  if (map) map.zoomIn()
+}
+
+const handleZoomOut = () => {
+  if (map) map.zoomOut()
 }
 
 onActivated(() => {
@@ -293,7 +288,7 @@ defineExpose({ flyToItem })
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
-  z-index: var(--z-bottom-nav);
+  z-index: 1000;
 }
 
 .map-btn {
@@ -315,48 +310,6 @@ defineExpose({ flyToItem })
 
 .map-btn:active {
   transform: scale(0.92);
-}
-
-/* Category legend */
-.map-legend {
-  position: absolute;
-  left: var(--space-md);
-  bottom: calc(var(--bottom-nav-height) + var(--safe-bottom) + var(--space-md));
-
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xs);
-
-  padding: var(--space-sm);
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(8px);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border-light);
-  box-shadow: var(--shadow-sm);
-
-  z-index: var(--z-bottom-nav);
-  pointer-events: none;
-}
-
-.legend-item {
-  display: flex;
-  align-items: center;
-  gap: var(--space-xs);
-}
-
-.legend-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: var(--radius-full);
-  border: 1.5px solid var(--surface-elevated);
-  flex-shrink: 0;
-}
-
-.legend-label {
-  font-size: var(--text-xs);
-  font-weight: 600;
-  color: var(--text-dark);
-  white-space: nowrap;
 }
 
 /* Markers — pill showing the starting price, colored by category */

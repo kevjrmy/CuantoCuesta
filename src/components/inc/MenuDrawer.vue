@@ -21,6 +21,20 @@
                 <span class="link-label">Home</span>
               </div>
             </RouterLink>
+            <RouterLink to="/explore" class="menu-link" @click="$emit('close')">
+              <div class="link-content">
+                <icon-mdi-magnify class="nav-icon" />
+                <span class="link-label">Explore</span>
+              </div>
+            </RouterLink>
+          </div>
+          <div class="nav-group nav-group-secondary">
+            <RouterLink to="/about" class="menu-link" @click="$emit('close')">
+              <div class="link-content">
+                <icon-mdi-information-outline class="nav-icon" />
+                <span class="link-label">About</span>
+              </div>
+            </RouterLink>
           </div>
         </nav>
       </div>
@@ -123,6 +137,12 @@ aside.is-open {
   display: flex;
   flex-direction: column;
   gap: var(--space-xs);
+}
+
+.nav-group-secondary {
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border-light);
 }
 
 .menu-link {

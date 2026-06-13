@@ -11,17 +11,34 @@
           <img v-if="item.image_url" :src="item.image_url" :alt="item.name" class="item-image" />
 
           <div class="item-details">
-            <h2 class="item-name">{{ item.name }}</h2>
-            
-            <p class="item-address">
-              <icon-mdi-map-marker-outline class="icon-sm" />
-              {{ item.address?.street || item.city }}
-            </p>
+            <div class="item-header-row">
+              <img v-if="item.logo_url" :src="item.logo_url" class="item-logo" alt="" />
+              <div class="item-header-text">
+                <h2 class="item-name">
+                  {{ item.name }}
+                  <icon-mdi-check-decagram v-if="item.verified" class="verified-icon" />
+                </h2>
+                
+                <p class="item-address">
+                  <icon-mdi-map-marker-outline class="icon-sm" />
+                  {{ item.address?.street || item.city }}
+                </p>
+              </div>
+            </div>
 
             <div class="item-meta">
               <div class="price-badge price-badge--neutral">
                 <icon-mdi-currency-eur class="icon-sm" />
-                <span>{{ item.price_range }}</span>
+                <span v-if="item.price_from != null && item.price_to != null && item.price_from !== item.price_to">
+                  {{ item.price_from }}€ - {{ item.price_to }}€
+                </span>
+                <span v-else-if="item.price_from != null && item.price_to != null && item.price_from === item.price_to">
+                  {{ item.price_from }}€
+                </span>
+                <span v-else-if="item.price_from != null">Desde {{ item.price_from }}€</span>
+                <span v-else-if="item.price_to != null">Hasta {{ item.price_to }}€</span>
+                <span v-else-if="item.price_range">{{ item.price_range }}</span>
+                <span v-else>—</span>
               </div>
 
               <span v-if="item.rating" class="item-rating">
@@ -108,11 +125,40 @@ defineEmits(['close'])
   flex-direction: column;
 }
 
+.item-header-row {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+  margin-bottom: var(--space-md);
+}
+
+.item-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  border: 1px solid var(--border-light);
+  flex-shrink: 0;
+}
+
+.item-header-text {
+  flex: 1;
+  min-width: 0;
+}
+
 .item-name {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-size: var(--text-xl);
   font-weight: 700;
   color: var(--text-dark);
   margin-bottom: var(--space-xs);
+}
+
+.verified-icon {
+  color: #1d9bf0;
+  flex-shrink: 0;
 }
 
 .item-address {
@@ -121,7 +167,7 @@ defineEmits(['close'])
   gap: var(--space-xs);
   font-size: var(--text-sm);
   color: var(--text-medium);
-  margin-bottom: var(--space-md);
+  margin-bottom: 0;
 }
 
 .item-meta {

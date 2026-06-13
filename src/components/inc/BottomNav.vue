@@ -14,11 +14,11 @@
       <span class="nav-label">Explore</span>
     </RouterLink>
 
-    <RouterLink to="/account" class="nav-item">
+    <RouterLink to="/dashboard" class="nav-item">
       <span class="nav-icon-wrapper">
         <icon-mdi-account-outline class="nav-icon" />
       </span>
-      <span class="nav-label">You</span>
+      <span class="nav-label">Dashboard</span>
     </RouterLink>
   </nav>
 </template>
