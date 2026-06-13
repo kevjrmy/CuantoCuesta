@@ -64,6 +64,7 @@
             <div class="pill-grid">
               <button v-for="opt in sortOptions" :key="opt.value" @click="updateFilter('sortBy', opt.value)"
                 :class="['pill-btn', { active: filters.sortBy === opt.value }]">
+                <component :is="opt.icon" class="sort-icon" />
                 {{ opt.label }}
               </button>
             </div>
@@ -80,6 +81,10 @@
 </template>
 
 <script setup>
+import IconMdiChevronUp from '~icons/mdi/chevron-up'
+import IconMdiChevronDown from '~icons/mdi/chevron-down'
+import IconMdiStar from '~icons/mdi/star'
+
 const props = defineProps({
   show: Boolean,
   filters: Object,
@@ -92,9 +97,9 @@ const emit = defineEmits(['close', 'clear', 'update:filters'])
 const sourceKeys = ['booksy', 'treatwell']
 
 const sortOptions = [
-  { value: 'price-asc', label: 'Price ↑' },
-  { value: 'price-desc', label: 'Price ↓' },
-  { value: 'rating-desc', label: 'Rating' }
+  { value: 'price-asc', label: 'Price', icon: IconMdiChevronUp },
+  { value: 'price-desc', label: 'Price', icon: IconMdiChevronDown },
+  { value: 'rating-desc', label: 'Rating', icon: IconMdiStar }
 ]
 
 const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1)
@@ -192,6 +197,9 @@ const updateFilter = (key, value) => {
 }
 
 .pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   padding: 0.5rem 0.75rem;
   border-radius: var(--radius-md);
   border: 1px solid var(--border-strong);
@@ -200,6 +208,10 @@ const updateFilter = (key, value) => {
   font-weight: 600;
   color: var(--text-medium);
   transition: all var(--duration-fast);
+}
+
+.sort-icon {
+  font-size: 1.1em;
 }
 
 .pill-btn.active {

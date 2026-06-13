@@ -1,6 +1,6 @@
 <template>
   <MainLayout>
-    <Header @toggle-menu="isDrawerOpen = true" />
+    <Header @toggle-menu="isDrawerOpen = true" @select-item="handleSelectItem" />
     <Map ref="mapRef" :items="items" />
     <MenuDrawer :is-open="isDrawerOpen" @close="isDrawerOpen = false" />
   </MainLayout>
@@ -17,6 +17,13 @@ const API_BASE = import.meta.env.VITE_API_BASE ?? ''
 
 const isDrawerOpen = ref(false)
 const items = ref([])
+const mapRef = ref(null)
+
+const handleSelectItem = (item) => {
+  if (mapRef.value) {
+    mapRef.value.flyToItem(item)
+  }
+}
 
 onMounted(async () => {
   try {

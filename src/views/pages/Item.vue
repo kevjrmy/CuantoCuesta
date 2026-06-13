@@ -89,7 +89,7 @@
       <section v-if="services.length > 0" class="section">
         <h2 class="section-title">Servicios</h2>
         <div class="services-list">
-          <div v-for="svc in services" :key="svc.name" class="service-row">
+          <div v-for="svc in visibleServices" :key="svc.name" class="service-row">
             <div class="service-info">
               <span class="service-name">{{ svc.name }}</span>
               <span v-if="svc.description" class="service-desc">{{ svc.description }}</span>
@@ -111,6 +111,16 @@
             </div>
           </div>
         </div>
+        <button v-if="services.length > 5" @click="servicesExpanded = !servicesExpanded" class="show-more-btn">
+          <template v-if="!servicesExpanded">
+            <icon-mdi-chevron-down />
+            Ver los {{ services.length - 5 }} servicios restantes
+          </template>
+          <template v-else>
+            <icon-mdi-chevron-up />
+            Ver menos
+          </template>
+        </button>
       </section>
 
       <!-- Sources / platforms -->
@@ -134,11 +144,24 @@
       </section>
 
     </div>
+
+    <!-- Floating WhatsApp CTA -->
+    <a
+      v-if="business"
+      :href="`https://wa.me/34600000000?text=${encodeURIComponent('Hola! Me interesa ' + business.name)}`"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="whatsapp-fab"
+      aria-label="Contactar por WhatsApp"
+    >
+      <icon-mdi-whatsapp class="whatsapp-icon" />
+      <span>WhatsApp</span>
+    </a>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 
 const API_BASE = import.meta.env.VITE_API_BASE ?? ''
@@ -147,8 +170,13 @@ const router = useRouter()
 
 const business = ref(null)
 const services = ref([])
+const servicesExpanded = ref(false)
 const loading = ref(true)
 const error = ref(false)
+
+const visibleServices = computed(() =>
+  servicesExpanded.value ? services.value : services.value.slice(0, 5)
+)
 
 const formatCategory = (cat) => {
   if (!cat) return ''
@@ -503,5 +531,47 @@ onMounted(fetchAll)
   color: var(--text-inverse);
   font-weight: 600;
   font-size: var(--text-sm);
+}
+
+/* ── WhatsApp FAB ── */
+.whatsapp-fab {
+  position: fixed;
+  bottom: calc(var(--space-xl) + var(--safe-bottom));
+  right: var(--space-md);
+  z-index: var(--z-toast);
+
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-full);
+  background: #25d366;
+  color: #fff;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45);
+
+  transition: transform var(--duration-fast) var(--ease-out),
+              box-shadow var(--duration-fast) var(--ease-out);
+  animation: fab-pop 0.4s var(--ease-out) both;
+}
+
+.whatsapp-fab:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.55);
+}
+
+.whatsapp-fab:active {
+  transform: scale(0.96);
+}
+
+.whatsapp-icon {
+  font-size: 1.4em;
+}
+
+@keyframes fab-pop {
+  from { opacity: 0; transform: scale(0.7) translateY(12px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
 }
 </style>

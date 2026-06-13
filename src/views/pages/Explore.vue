@@ -87,7 +87,7 @@ const filters = reactive({
   priceMax: null,
   source: '',
   minRating: 0,
-  sortBy: ''
+  sortBy: 'price-asc'
 })
 
 const buildUrl = () => {
@@ -142,7 +142,7 @@ const hasActiveFilters = computed(() =>
   || filters.priceMax !== null
   || filters.source !== ''
   || filters.minRating > 0
-  || filters.sortBy !== ''
+  || (filters.sortBy !== '' && filters.sortBy !== 'price-asc')
 )
 
 const filteredItems = computed(() => {
@@ -173,7 +173,7 @@ const clearFilters = () => {
   filters.priceMax = null
   filters.source = ''
   filters.minRating = 0
-  filters.sortBy = ''
+  filters.sortBy = 'price-asc'
 }
 
 const clearAll = () => {
@@ -192,6 +192,8 @@ onMounted(fetchItems)
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  padding-inline: var(--space-sm);
+  padding-top: calc(var(--safe-top) + var(--space-md));
   padding-bottom: var(--space-xl);
 }
 

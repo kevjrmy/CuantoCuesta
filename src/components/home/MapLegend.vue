@@ -19,10 +19,21 @@ const props = defineProps({
 
 console.log('[MapLegend] mounted, items:', props.items?.length, props.items?.map(i => i.category))
 
-const CATEGORY_COLORS = {
-  barberia: '#f59e0b'
-}
-const FALLBACK_COLOR = 'var(--clr-primary)'
+// A curated palette of distinct green shades — from deep forest to bright lime
+const GREEN_PALETTE = [
+  '#14532d', // deep forest
+  '#15803d', // logo dark green
+  '#16a34a', // primary brand green
+  '#22c55e', // medium green
+  '#4ade80', // light green
+  '#86efac', // mint
+  '#6ee7b7', // teal-green
+  '#34d399', // emerald
+  '#059669', // dark emerald
+  '#10b981', // emerald mid
+  '#065f46', // deep emerald
+  '#a3e635', // yellow-green / lime
+]
 
 const categoryKeys = computed(() => {
   const seen = new Set()
@@ -34,7 +45,10 @@ const categoryKeys = computed(() => {
   return Array.from(seen).sort()
 })
 
-const getCategoryColor = (category) => CATEGORY_COLORS[category] || FALLBACK_COLOR
+const getCategoryColor = (category) => {
+  const idx = categoryKeys.value.indexOf(category)
+  return GREEN_PALETTE[idx % GREEN_PALETTE.length]
+}
 
 const formatCategoryLabel = (category) => {
   if (!category) return ''

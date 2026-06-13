@@ -2,9 +2,7 @@
   <MainLayout>
     <div class="about-page">
       <section class="hero-section">
-        <div class="hero-icon">
-          <icon-mdi-currency-eur />
-        </div>
+        <img src="/logo.svg" alt="Cuanto Cuesta Logo" class="hero-logo" />
         <h1>Cuánto Cuesta</h1>
         <p class="tagline">Compara precios en Valencia y ahorra</p>
         <p class="description">
@@ -134,16 +132,9 @@ import MainLayout from '@/layouts/MainLayout.vue'
   padding: var(--space-xl) 0;
 }
 
-.hero-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: var(--radius-full);
-  background: var(--clr-primary-light);
-  color: var(--clr-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: var(--text-2xl);
+.hero-logo {
+  width: 64px;
+  height: 64px;
   margin-bottom: var(--space-md);
 }
 

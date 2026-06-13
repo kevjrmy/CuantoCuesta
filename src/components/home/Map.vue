@@ -54,12 +54,27 @@ let userMarker = null
 let userCircle = null
 let toastTimer = null
 
-// Category → color map for markers/legend. Extend as the catalog grows;
-// anything not listed here falls back to the primary accent.
-const CATEGORY_COLORS = {
-  barberia: '#f59e0b'
+// Same green palette as MapLegend — must stay in sync
+const GREEN_PALETTE = [
+  '#14532d', // deep forest
+  '#15803d', // logo dark green
+  '#16a34a', // primary brand green
+  '#22c55e', // medium green
+  '#4ade80', // light green
+  '#86efac', // mint
+  '#6ee7b7', // teal-green
+  '#34d399', // emerald
+  '#059669', // dark emerald
+  '#10b981', // emerald mid
+  '#065f46', // deep emerald
+  '#a3e635', // yellow-green / lime
+]
+
+const getCategoryColor = (category) => {
+  const allCategories = [...new Set(props.items.map(i => i.category).filter(Boolean))].sort()
+  const idx = allCategories.indexOf(category)
+  return GREEN_PALETTE[idx % GREEN_PALETTE.length] ?? GREEN_PALETTE[0]
 }
-const FALLBACK_COLOR = 'var(--clr-primary)'
 
 const CURRENCY_SYMBOLS = {
   EUR: '€',
@@ -67,7 +82,6 @@ const CURRENCY_SYMBOLS = {
   GBP: '£'
 }
 
-const getCategoryColor = (category) => CATEGORY_COLORS[category] || FALLBACK_COLOR
 
 const formatMarkerPrice = (item) => {
   if (item.price_from == null) return '?'

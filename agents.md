@@ -4,6 +4,11 @@
 
 This is a 2-day MVP built during a Techstars Startup Weekend. The product is a **price comparison PWA** — users can search/browse items and compare prices across sources.
 
+## Assets & Branding
+
+- **Logo (Icon only):** `public/logo.svg`
+- **Logo (Icon + Text):** `public/logo-text.svg`
+
 ## Tech Stack
 
 - **Build tool:** Vite

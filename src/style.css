@@ -13,12 +13,11 @@
    ══════════════════════════════════════════════════════ */
 
 :root {
-  /* ── Brand / accent colors (placeholder) ─────────────
-     Primary: calm blue — relaxing and trustworthy.
-     Swap for real brand color. */
-  --clr-primary: #3b82f6;
-  --clr-primary-dark: #2563eb;
-  --clr-primary-light: #eff6ff;
+  /* ── Brand / accent colors ─────────────
+     Primary: vibrant green to match the logo. */
+  --clr-primary: #16a34a;
+  --clr-primary-dark: #15803d;
+  --clr-primary-light: #f0fdf4;
 
   /* Price-down / savings (the "good news" color) */
   --clr-success: #1faf6e;

@@ -7,7 +7,7 @@
     <aside :class="{ 'is-open': isOpen }" :inert="!isOpen" aria-label="Menu">
       <div class="drawer-inner">
         <div class="drawer-header">
-          <!-- <img src="/logo.svg" alt="Logo" class="logo" height="auto" width="100" /> -->
+          <img src="/logo-text.svg" alt="Cuanto Cuesta Logo" class="drawer-logo" />
           <button @click="$emit('close')" class="btn-close" aria-label="Cerrar">
             <icon-mdi-close />
           </button>
@@ -102,11 +102,15 @@ aside.is-open {
 
 .drawer-header {
   display: flex;
-  /* swap to space-between if the logo gets uncommented */
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 
   margin-bottom: var(--space-lg);
+}
+
+.drawer-logo {
+  height: 28px;
+  width: auto;
 }
 
 .btn-close {

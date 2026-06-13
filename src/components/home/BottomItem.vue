@@ -30,13 +30,13 @@
               <div class="price-badge price-badge--neutral">
                 <icon-mdi-currency-eur class="icon-sm" />
                 <span v-if="item.price_from != null && item.price_to != null && item.price_from !== item.price_to">
-                  {{ item.price_from }}€ - {{ item.price_to }}€
+                  {{ item.price_from }} - {{ item.price_to }}
                 </span>
                 <span v-else-if="item.price_from != null && item.price_to != null && item.price_from === item.price_to">
-                  {{ item.price_from }}€
+                  {{ item.price_from }}
                 </span>
-                <span v-else-if="item.price_from != null">Desde {{ item.price_from }}€</span>
-                <span v-else-if="item.price_to != null">Hasta {{ item.price_to }}€</span>
+                <span v-else-if="item.price_from != null">Desde {{ item.price_from }}</span>
+                <span v-else-if="item.price_to != null">Hasta {{ item.price_to }}</span>
                 <span v-else-if="item.price_range">{{ item.price_range }}</span>
                 <span v-else>—</span>
               </div>
