@@ -103,7 +103,18 @@ const showToast = (message, duration = 3000) => {
 }
 
 const renderMarkers = () => {
-  if (!map || !props.items) return
+  // Map may still be initialising when the API fetch resolves — retry once it's ready
+  if (!map) {
+    console.warn('[Map] renderMarkers called before map ready, retrying in 200ms')
+    setTimeout(renderMarkers, 200)
+    return
+  }
+  if (!props.items?.length) {
+    console.log('[Map] renderMarkers called but items is empty, skipping')
+    return
+  }
+  console.log('[Map] Rendering', props.items.length, 'markers')
+
   if (markerLayer) markerLayer.clearLayers()
   else markerLayer = L.layerGroup().addTo(map)
 
@@ -124,8 +135,8 @@ const renderMarkers = () => {
   })
 }
 
-// Re-render pins whenever the item list changes (e.g. filters on the parent view)
-watch(() => props.items, renderMarkers, { deep: true })
+// Re-render pins whenever the item list is replaced (API fetch) or mutated (filters)
+watch(() => props.items, renderMarkers)
 
 const flyToItem = (item) => {
   if (!map) return

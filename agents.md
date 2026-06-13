@@ -4,8 +4,6 @@
 
 This is a 2-day MVP built during a Techstars Startup Weekend. The product is a **price comparison PWA** — users can search/browse items and compare prices across sources.
 
-This document currently covers the **frontend only**. Backend, database, and business model sections will be added once the backend stack is confirmed (likely **Go**).
-
 ## Tech Stack
 
 - **Build tool:** Vite
@@ -13,7 +11,8 @@ This document currently covers the **frontend only**. Backend, database, and bus
 - **PWA:** vite-plugin-pwa
 - **Styling:** Vanilla CSS only — no Tailwind, no SASS/SCSS
 - **Icons:** unplugin-vue-components + unplugin-icons + @iconify/json
-- **Backend:** Go
+- **Backend:** Go (deployed on Google Cloud Run)
+- **API spec:** `api/openapi.yaml` (OpenAPI 3.0)
 
 ## Frontend Ownership
 
@@ -83,6 +82,8 @@ import IconSearch from '~icons/mdi/magnify'
 ## Project Structure (current)
 
 ```text
+api/
+  openapi.yaml
 src/
   components/
     explore/
@@ -100,7 +101,7 @@ src/
       Back.vue
       Toast.vue
   data/
-    cuanto_cuesta.json
+    cuanto_cuesta.json        ← mock data, kept for reference/fallback
   layouts/
     AltLayout.vue
     DefaultLayout.vue
@@ -126,9 +127,9 @@ The application structure consists of:
 - **Bottom navigation** (`BottomNav.vue`) — fixed bottom nav bar for primary app sections.
 - **Pages** (`views/pages/`) — main content views (`Home.vue`, `Explore.vue`, `About.vue`) containing price comparison results, search, etc.
 
-## Data Model (Mock)
+## Data Model
 
-Currently, the app uses a mock JSON file (`src/data/cuanto_cuesta.json`) for items. The basic structure of a business/item record is:
+The basic structure of a business/item record (`BusinessSummary` schema):
 
 ```json
 {
@@ -137,14 +138,14 @@ Currently, the app uses a mock JSON file (`src/data/cuanto_cuesta.json`) for ite
   "category": "barberia",
   "schema_type": "HairSalon",
   "description": "...",
-  "city": "santiago-de-compostela",
+  "city": "valencia",
   "address": {
     "street": "...",
     "locality": "...",
     "postal_code": "...",
     "country": "es"
   },
-  "location": { "lat": 42.87, "lng": -8.54 },
+  "location": { "lat": 39.46, "lng": -0.37 },
   "rating": { "value": 4.8, "review_count": 67 },
   "price_range": "EUR 5 - 18",
   "price_from": 5,
@@ -152,15 +153,63 @@ Currently, the app uses a mock JSON file (`src/data/cuanto_cuesta.json`) for ite
   "price_currency": "EUR",
   "image_url": "...",
   "logo_url": "...",
+  "sponsored": false,
+  "verified": true,
   "sources": ["booksy"],
   "last_verified": "2026-06-12T22:21:24Z",
   "stale": false
 }
 ```
 
+## API
+
+The backend is a Go service deployed on **Google Cloud Run**:
+
+- **Production URL:** `https://cuanto-cuesta-85809682499.us-central1.run.app`
+- **Spec:** `api/openapi.yaml` (OpenAPI 3.0)
+- **Scope:** Valencia only (`city=valencia`)
+
+### Dev proxy (CORS)
+
+The Cloud Run API does not send CORS headers, so direct browser fetches from `localhost` are blocked.
+The Vite dev server proxies all `/v1/*` requests to the Cloud Run origin (`vite.config.js` → `server.proxy`).
+
+In components, always use a **relative path** with no base URL:
+
+```js
+const API_BASE = import.meta.env.VITE_API_BASE ?? ''
+// → VITE_API_BASE is intentionally empty in .env
+// → In dev: Vite proxy forwards /v1/... to Cloud Run
+// → In prod: same-origin Go server handles /v1/...
+fetch(`${API_BASE}/v1/businesses?city=valencia&limit=100`)
+```
+
+Never hardcode the Cloud Run URL in component code — it only lives in `vite.config.js`.
+
+### Key endpoints
+
+| Endpoint | Description |
+|---|---|
+| `GET /v1/businesses` | List/search with filters (category, city, q, min_rating, geo, pagination) |
+| `GET /v1/businesses/{id}` | Full business detail (with ETag caching) |
+| `GET /v1/businesses/{id}/services` | Service menu per business |
+| `GET /v1/businesses/{id}/reviews` | Sample reviews per business |
+| `GET /v1/categories` | Facet index of categories with counts |
+| `GET /v1/cities` | Facet index of cities with counts |
+| `POST /v1/admin/scrape` | Authenticated background scraper |
+| `GET /v1/admin/scrape` | Status of most recent scrape job |
+
+### API response shape (`GET /v1/businesses`)
+
+```json
+{
+  "items": [ /* BusinessSummary[] */ ],
+  "total": 42,
+  "limit": 20,
+  "offset": 0
+}
+```
+
 ## Out of Scope (for now)
 
-- Backend integration (API calls, data fetching) — stack TBD, likely Go
 - Business model / monetization
-
-These sections will be appended to this file once decided.

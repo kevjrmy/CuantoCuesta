@@ -1,49 +1,85 @@
 <template>
   <MainLayout>
     <div id="explore-page" class="app-main">
+
       <header class="explore-header">
-        <h1>Explore</h1>
-        <button @click="showFilters = true" class="filter-btn" :class="{ 'has-filters': hasActiveFilters }"
-          aria-label="Filters">
+        <div class="search-bar">
+          <icon-mdi-magnify class="search-icon" />
+          <input
+            v-model="searchQuery"
+            type="search"
+            placeholder="Buscar negocio..."
+            class="search-input"
+            @input="onSearch"
+          />
+        </div>
+        <button
+          @click="showFilters = true"
+          class="filter-btn"
+          :class="{ 'has-filters': hasActiveFilters }"
+          aria-label="Filtros"
+        >
           <icon-mdi-tune />
+          <span v-if="hasActiveFilters" class="filter-dot" />
         </button>
       </header>
 
+      <div v-if="!loading && filteredItems.length > 0" class="results-count">
+        {{ filteredItems.length }} resultado{{ filteredItems.length !== 1 ? 's' : '' }}
+      </div>
+
       <div class="items-list">
         <div v-if="loading" class="loading-state">
-          <div class="spinner"></div>
-          <p>Searching for places...</p>
+          <div class="spinner" />
+          <p>Buscando...</p>
         </div>
 
         <template v-else-if="filteredItems.length > 0">
-          <ItemCard v-for="item in filteredItems" :key="item.id" :item="item" :user-location="userLocation" />
+          <ItemCard
+            v-for="item in filteredItems"
+            :key="item.id"
+            :item="item"
+            :user-location="userLocation"
+            @click="goToItem(item.id)"
+          />
         </template>
 
         <div v-else class="empty-state">
-          <div class="empty-icon">☁️</div>
-          <h3>No results found</h3>
-          <p>Try adjusting your filters</p>
-          <button @click="clearFilters" class="reset-link">Clear filters</button>
+          <div class="empty-icon">🔍</div>
+          <h3>Sin resultados</h3>
+          <p>Prueba a cambiar los filtros</p>
+          <button @click="clearAll" class="reset-btn">Limpiar todo</button>
         </div>
       </div>
 
-      <ExploreFilters :show="showFilters" :filters="filters" @close="showFilters = false" @clear="clearFilters"
-        @update:filters="val => Object.assign(filters, val)" />
+      <ExploreFilters
+        :show="showFilters"
+        :filters="filters"
+        :categories="categoryKeys"
+        :category-names="categoryNames"
+        @close="showFilters = false"
+        @clear="clearFilters"
+        @update:filters="val => Object.assign(filters, val)"
+      />
     </div>
   </MainLayout>
 </template>
 
 <script setup>
-import { ref, computed, reactive, onMounted } from 'vue'
+import { ref, computed, reactive, onMounted, watch } from 'vue'
+import { useRouter } from 'vue-router'
 import MainLayout from '@/layouts/MainLayout.vue'
 import ItemCard from '@/components/explore/ItemCard.vue'
 import ExploreFilters from '@/components/explore/ExploreFilters.vue'
-import mockData from '@/data/cuanto_cuesta.json'
 
-const items = mockData.items
+const API_BASE = import.meta.env.VITE_API_BASE ?? ''
+const router = useRouter()
+
+const allItems = ref([])
 const loading = ref(true)
 const showFilters = ref(false)
 const userLocation = ref(null)
+const searchQuery = ref('')
 
 const filters = reactive({
   category: '',
@@ -54,38 +90,71 @@ const filters = reactive({
   sortBy: ''
 })
 
-const hasActiveFilters = computed(() => {
-  return filters.category !== ''
-    || filters.priceMin !== null
-    || filters.priceMax !== null
-    || filters.source !== ''
-    || filters.minRating > 0
-    || filters.sortBy !== ''
+const buildUrl = () => {
+  const params = new URLSearchParams({ city: 'valencia', limit: '100' })
+  if (filters.category) params.set('category', filters.category)
+  if (filters.minRating > 0) params.set('min_rating', String(filters.minRating))
+  if (searchQuery.value.trim()) params.set('q', searchQuery.value.trim())
+  return `${API_BASE}/v1/businesses?${params}`
+}
+
+const fetchItems = async () => {
+  loading.value = true
+  try {
+    const res = await fetch(buildUrl())
+    if (!res.ok) throw new Error(`API error ${res.status}`)
+    const data = await res.json()
+    allItems.value = data.items ?? []
+  } catch (err) {
+    console.error('[Explore] Failed to load businesses:', err)
+    allItems.value = []
+  } finally {
+    loading.value = false
+  }
+}
+
+let searchTimer = null
+const onSearch = () => {
+  clearTimeout(searchTimer)
+  searchTimer = setTimeout(fetchItems, 350)
+}
+
+watch(() => [filters.category, filters.minRating], fetchItems)
+
+const categoryKeys = computed(() => {
+  const cats = new Set(allItems.value.map(i => i.category).filter(Boolean))
+  return [...cats].sort()
 })
 
-const filteredItems = computed(() => {
-  let result = items
-
-  if (filters.category) {
-    result = result.filter(item => item.category === filters.category)
+const categoryNames = computed(() => {
+  const names = {}
+  for (const cat of categoryKeys.value) {
+    names[cat] = cat.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
   }
+  return names
+})
+
+const hasActiveFilters = computed(() =>
+  filters.category !== ''
+  || filters.priceMin !== null
+  || filters.priceMax !== null
+  || filters.source !== ''
+  || filters.minRating > 0
+  || filters.sortBy !== ''
+)
+
+const filteredItems = computed(() => {
+  let result = [...allItems.value]
 
   if (filters.priceMin !== null) {
     result = result.filter(item => item.price_from >= filters.priceMin)
   }
-
   if (filters.priceMax !== null) {
     result = result.filter(item => item.price_to <= filters.priceMax)
   }
-
   if (filters.source) {
-    result = result.filter(item => item.sources && item.sources.includes(filters.source))
+    result = result.filter(item => item.sources?.includes(filters.source))
   }
-
-  if (filters.minRating > 0) {
-    result = result.filter(item => item.rating && item.rating.value >= filters.minRating)
-  }
-
   if (filters.sortBy) {
     switch (filters.sortBy) {
       case 'price-asc':
@@ -99,7 +168,6 @@ const filteredItems = computed(() => {
         break
     }
   }
-
   return result
 })
 
@@ -112,12 +180,15 @@ const clearFilters = () => {
   filters.sortBy = ''
 }
 
-onMounted(() => {
-  // Simulate network request to show the loader for a brief moment
-  setTimeout(() => {
-    loading.value = false
-  }, 600)
-})
+const clearAll = () => {
+  clearFilters()
+  searchQuery.value = ''
+  fetchItems()
+}
+
+const goToItem = (id) => router.push({ name: 'item', params: { id } })
+
+onMounted(fetchItems)
 </script>
 
 <style scoped>
@@ -128,30 +199,68 @@ onMounted(() => {
   padding-bottom: var(--space-xl);
 }
 
+/* ── Header ── */
 .explore-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: var(--space-md);
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
 }
 
-.explore-header h1 {
-  font-size: var(--text-2xl);
-  font-weight: 700;
+.search-bar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: var(--surface-elevated);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-full);
+  padding: 0 var(--space-md);
+  height: 44px;
+  transition: border-color var(--duration-fast);
+}
+
+.search-bar:focus-within {
+  border-color: var(--clr-primary);
+}
+
+.search-icon {
+  color: var(--text-light);
+  font-size: var(--text-lg);
+  flex-shrink: 0;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: var(--text-sm);
   color: var(--text-dark);
 }
 
+.search-input::placeholder {
+  color: var(--text-muted);
+}
+
+/* hide the native clear (x) button in Chrome/Safari */
+.search-input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
 .filter-btn {
+  position: relative;
   width: 44px;
   height: 44px;
   border-radius: var(--radius-full);
   background: var(--surface-elevated);
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--border-default);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--text-dark);
   font-size: var(--text-lg);
+  flex-shrink: 0;
   transition: all var(--duration-fast);
 }
 
@@ -161,12 +270,34 @@ onMounted(() => {
   border-color: var(--clr-primary);
 }
 
+.filter-dot {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--clr-primary);
+  border: 2px solid var(--surface-elevated);
+}
+
+/* ── Results count ── */
+.results-count {
+  font-size: var(--text-xs);
+  color: var(--text-light);
+  font-weight: 500;
+  margin-bottom: var(--space-sm);
+  padding-left: var(--space-xs);
+}
+
+/* ── List ── */
 .items-list {
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
+  gap: var(--space-sm);
 }
 
+/* ── States ── */
 .loading-state,
 .empty-state {
   display: flex;
@@ -179,30 +310,37 @@ onMounted(() => {
 }
 
 .empty-icon {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: var(--space-sm);
 }
 
-.reset-link {
+.empty-state h3 {
+  font-size: var(--text-lg);
+  color: var(--text-dark);
+  margin-bottom: var(--space-xs);
+}
+
+.reset-btn {
   margin-top: var(--space-md);
-  color: var(--clr-primary);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-full);
+  background: var(--clr-primary);
+  color: var(--text-inverse);
+  font-size: var(--text-sm);
   font-weight: 600;
-  text-decoration: underline;
 }
 
 .spinner {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   border: 3px solid var(--border-light);
   border-top-color: var(--clr-primary);
   border-radius: 50%;
-  animation: spin 1s linear infinite;
+  animation: spin 0.8s linear infinite;
   margin-bottom: var(--space-md);
 }
 
 @keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+  to { transform: rotate(360deg); }
 }
 </style>

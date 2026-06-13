@@ -13,6 +13,14 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+  server: {
+    proxy: {
+      '/v1': {
+        target: 'https://cuanto-cuesta-85809682499.us-central1.run.app',
+        changeOrigin: true,
+      },
+    },
+  },
   plugins: [
     vue(),
     Components({

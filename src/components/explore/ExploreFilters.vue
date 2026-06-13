@@ -11,7 +11,7 @@
           <div class="filter-group">
             <label>Category</label>
             <div class="pill-grid">
-              <button v-for="cat in categoryKeys" :key="cat"
+              <button v-for="cat in categories" :key="cat"
                 @click="updateFilter('category', cat)"
                 :class="['pill-btn', { active: filters.category === cat }]">
                 {{ getCategoryName(cat) }}
@@ -85,12 +85,12 @@
 <script setup>
 const props = defineProps({
   show: Boolean,
-  filters: Object
+  filters: Object,
+  categories: { type: Array, default: () => [] },
+  categoryNames: { type: Object, default: () => ({}) }
 })
 
 const emit = defineEmits(['close', 'clear', 'update:filters'])
-
-const categoryKeys = ['barberia', 'salon-de-unas']
 
 const sourceKeys = ['booksy', 'treatwell']
 
@@ -101,15 +101,12 @@ const sortOptions = [
   { value: 'rating-desc', label: 'Rating' }
 ]
 
-const getCategoryName = (cat) => {
-  const map = {
-    'barberia': 'Barbershop',
-    'salon-de-unas': 'Nail Salon'
-  }
-  return map[cat] || cat
-}
-
 const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1)
+
+const getCategoryName = (cat) => {
+  if (props.categoryNames[cat]) return props.categoryNames[cat]
+  return cat.split('-').map(capitalize).join(' ')
+}
 
 const updateFilter = (key, value) => {
   const newFilters = { ...props.filters }
