@@ -4,43 +4,43 @@
       <section class="hero-section">
         <img src="/logo.svg" alt="Cuanto Cuesta Logo" class="hero-logo" />
         <h1>Cuánto Cuesta</h1>
-        <p class="tagline">Compara precios en Valencia y ahorra</p>
+        <p class="tagline">Compare prices in Valencia and save</p>
         <p class="description">
-          Encuentra y compara precios de servicios y productos cerca de ti.
-          Desde barberías hasta talleres, te ayudamos a elegir la mejor opción.
+          Find and compare prices of services and products near you.
+          From barber shops to workshops, we help you choose the best option.
         </p>
       </section>
 
       <section class="how-section">
-        <h2 class="section-title">Cómo funciona</h2>
+        <h2 class="section-title">How it works</h2>
         <div class="steps">
           <div class="step">
             <div class="step-number">1</div>
             <icon-mdi-magnify class="step-icon" />
-            <h3>Busca</h3>
-            <p>Explora negocios y servicios en Valencia</p>
+            <h3>Search</h3>
+            <p>Explore businesses and services in Valencia</p>
           </div>
           <div class="step">
             <div class="step-number">2</div>
             <icon-mdi-scale-balance class="step-icon" />
-            <h3>Compara</h3>
-            <p>Mira los precios de distintas opciones</p>
+            <h3>Compare</h3>
+            <p>Check prices of different options</p>
           </div>
           <div class="step">
             <div class="step-number">3</div>
             <icon-mdi-check-circle-outline class="step-icon" />
-            <h3>Ahorra</h3>
-            <p>Elige la mejor relación calidad-precio</p>
+            <h3>Save</h3>
+            <p>Choose the best value for money</p>
           </div>
         </div>
       </section>
 
       <section class="project-section">
-        <h2 class="section-title">El proyecto</h2>
+        <h2 class="section-title">Project</h2>
         <p>
-          Construido en 48 horas durante la Techstars Startup Weekend Valencia.
-          Un MVP para ayudar a los valencianos a encontrar los mejores precios
-          cerca de ellos, comparando fuentes como Booksy y otros partners.
+          Built in 48 hours during the Techstars Startup Weekend Valencia.
+          An MVP to help Valencians find the best prices
+          near them, comparing sources like Booksy and other partners.
         </p>
         <div class="badge">
           <icon-mdi-rocket-launch class="badge-icon" />
@@ -49,8 +49,26 @@
       </section>
 
       <section class="team-section">
-        <h2 class="section-title">Equipo</h2>
+        <h2 class="section-title">Team</h2>
         <div class="team-list">
+          <div class="team-member">
+            <div class="member-avatar">
+              <icon-mdi-bank-outline />
+            </div>
+            <div class="member-info">
+              <span class="member-name">Oleksandra</span>
+              <span class="member-role">Strategy & legal</span>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="member-avatar">
+              <icon-mdi-megaphone />
+            </div>
+            <div class="member-info">
+              <span class="member-name">Nyawira</span>
+              <span class="member-role">Marketing</span>
+            </div>
+          </div>
           <div class="team-member">
             <div class="member-avatar">
               <icon-mdi-lightbulb-on-outline />
@@ -62,7 +80,7 @@
           </div>
           <div class="team-member">
             <div class="member-avatar">
-              <icon-mdi-code-tags />
+              <icon-mdi-language-python />
             </div>
             <div class="member-info">
               <span class="member-name">Adriano</span>
@@ -75,34 +93,16 @@
             </div>
             <div class="member-info">
               <span class="member-name">Luis</span>
-              <span class="member-role">Backend (Go)</span>
+              <span class="member-role">Go Backend/API</span>
             </div>
           </div>
           <div class="team-member">
             <div class="member-avatar">
-              <icon-mdi-cellphone />
+              <icon-mdi-language-javascript />
             </div>
             <div class="member-info">
               <span class="member-name">Kevin</span>
-              <span class="member-role">Frontend (JavaScript)</span>
-            </div>
-          </div>
-          <div class="team-member">
-            <div class="member-avatar">
-              <icon-mdi-bank-outline />
-            </div>
-            <div class="member-info">
-              <span class="member-name">Oleksandra</span>
-              <span class="member-role">Estrategia & legal</span>
-            </div>
-          </div>
-          <div class="team-member">
-            <div class="member-avatar">
-              <icon-mdi-megaphone />
-            </div>
-            <div class="member-info">
-              <span class="member-name">Nyawira</span>
-              <span class="member-role">Marketing</span>
+              <span class="member-role">JavaScript UI/UX</span>
             </div>
           </div>
         </div>
@@ -252,37 +252,41 @@ import MainLayout from '@/layouts/MainLayout.vue'
 /* ── Team ── */
 
 .team-list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
 }
 
 .team-member {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: var(--space-md);
-  padding: var(--space-md);
+  text-align: center;
+  gap: var(--space-xs);
+  padding: var(--space-md) var(--space-sm);
   background: var(--surface-elevated);
   border-radius: var(--radius-md);
   border: 1px solid var(--border-light);
 }
 
 .member-avatar {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: var(--radius-full);
   background: var(--surface-tertiary);
   color: var(--text-medium);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: var(--text-lg);
+  font-size: var(--text-xl);
   flex-shrink: 0;
+  margin-bottom: var(--space-xs);
 }
 
 .member-info {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2px;
 }
 
