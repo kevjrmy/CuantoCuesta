@@ -27,13 +27,17 @@ const handleSelectItem = (item) => {
 
 onMounted(async () => {
   try {
-    const url = `${API_BASE}/v1/grooming/businesses?city=valencia&limit=100`
-    console.log('[Home] Fetching:', url)
-    const res = await fetch(url)
-    if (!res.ok) throw new Error(`API error ${res.status}`)
-    const data = await res.json()
-    console.log('[Home] API response — total:', data.total, 'items received:', data.items?.length, data.items?.map(i => ({ id: i.id, name: i.name, lat: i.location?.lat, lng: i.location?.lng })))
-    items.value = data.items ?? []
+    const params = new URLSearchParams({ city: 'valencia', limit: '100' })
+    const [groomingRes, servicesRes] = await Promise.all([
+      fetch(`${API_BASE}/v1/grooming/businesses?${params}`),
+      fetch(`${API_BASE}/v1/businesses?vertical=services&${params}`)
+    ])
+    
+    const groomingData = groomingRes.ok ? await groomingRes.json() : { items: [] }
+    const servicesData = servicesRes.ok ? await servicesRes.json() : { items: [] }
+    
+    items.value = [...(groomingData.items ?? []), ...(servicesData.items ?? [])]
+    console.log('[Home] API response — total items:', items.value.length)
   } catch (err) {
     console.error('[Home] Failed to load businesses:', err)
   }

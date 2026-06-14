@@ -102,13 +102,15 @@ const fetchItems = async () => {
   loading.value = true
   try {
     const params = buildParams()
-    const [groomingRes, vetsRes] = await Promise.all([
+    const [groomingRes, vetsRes, servicesRes] = await Promise.all([
       fetch(`${API_BASE}/v1/grooming/businesses?${params}`),
-      fetch(`${API_BASE}/v1/businesses?${params}`)
+      fetch(`${API_BASE}/v1/businesses?${params}`),
+      fetch(`${API_BASE}/v1/businesses?vertical=services&${params}`)
     ])
     const groomingData = groomingRes.ok ? await groomingRes.json() : { items: [] }
     const vetsData = vetsRes.ok ? await vetsRes.json() : { items: [] }
-    allItems.value = [...(groomingData.items ?? []), ...(vetsData.items ?? [])]
+    const servicesData = servicesRes.ok ? await servicesRes.json() : { items: [] }
+    allItems.value = [...(groomingData.items ?? []), ...(vetsData.items ?? []), ...(servicesData.items ?? [])]
   } catch (err) {
     console.error('[Explore] Failed to load businesses:', err)
     allItems.value = []

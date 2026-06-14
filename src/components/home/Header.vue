@@ -98,11 +98,18 @@ watch(searchQuery, (newVal) => {
 
   debounceTimer = setTimeout(async () => {
     try {
-      const url = `${API_BASE}/v1/grooming/businesses?city=valencia&q=${encodeURIComponent(newVal)}&limit=4`
-      const res = await fetch(url)
-      if (!res.ok) throw new Error(`API error ${res.status}`)
-      const data = await res.json()
-      results.value = data.items ?? []
+      const urlGrooming = `${API_BASE}/v1/grooming/businesses?city=valencia&q=${encodeURIComponent(newVal)}&limit=4`
+      const urlServices = `${API_BASE}/v1/businesses?vertical=services&city=valencia&q=${encodeURIComponent(newVal)}&limit=4`
+      
+      const [resGrooming, resServices] = await Promise.all([
+        fetch(urlGrooming),
+        fetch(urlServices)
+      ])
+      
+      const dataGrooming = resGrooming.ok ? await resGrooming.json() : { items: [] }
+      const dataServices = resServices.ok ? await resServices.json() : { items: [] }
+      
+      results.value = [...(dataGrooming.items ?? []), ...(dataServices.items ?? [])].slice(0, 5)
     } catch (err) {
       console.error('[Header] Failed to fetch search results:', err)
       results.value = []
