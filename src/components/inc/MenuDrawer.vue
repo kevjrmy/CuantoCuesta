@@ -35,6 +35,12 @@
                 <span class="link-label">About</span>
               </div>
             </RouterLink>
+            <RouterLink to="/download" class="menu-link" @click="$emit('close')">
+              <div class="link-content">
+                <icon-mdi-download class="nav-icon" />
+                <span class="link-label">Download App</span>
+              </div>
+            </RouterLink>
           </div>
         </nav>
       </div>

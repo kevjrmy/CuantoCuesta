@@ -23,6 +23,11 @@ const routes = [
     component: () => import('@/views/pages/About.vue'),
   },
   {
+    path: '/download',
+    name: 'download',
+    component: () => import('@/views/pages/Download.vue'),
+  },
+  {
     path: '/dashboard',
     name: 'dashboard',
     component: () => import('@/views/pages/Dashboard.vue'),
