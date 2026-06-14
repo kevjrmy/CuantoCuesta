@@ -7,7 +7,7 @@
     <aside :class="{ 'is-open': isOpen }" :inert="!isOpen" aria-label="Menu">
       <div class="drawer-inner">
         <div class="drawer-header">
-          <img src="/logo-text.svg" alt="Cuanto Cuesta Logo" class="drawer-logo" />
+          <img src="/logo-full.svg" alt="Cuanto Cuesta Logo" class="drawer-logo" />
           <button @click="$emit('close')" class="btn-close" aria-label="Cerrar">
             <icon-mdi-close />
           </button>

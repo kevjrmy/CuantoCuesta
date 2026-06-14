@@ -25,16 +25,7 @@
 
       <div class="card-footer">
         <div v-if="item.price_from != null || item.price_to != null" class="card-main-price">
-          <span v-if="item.price_from != null && item.price_to == null" class="from-label">Desde</span>
-          <span v-else-if="item.price_to != null && item.price_from == null" class="from-label">Hasta</span>
-          <span class="price-value">
-            <template v-if="item.price_from != null && item.price_to != null && item.price_from !== item.price_to">
-              {{ item.price_from }}€ - {{ item.price_to }}€
-            </template>
-            <template v-else>
-              {{ item.price_from ?? item.price_to }}€
-            </template>
-          </span>
+          <span class="price-value">{{ item.price_from ?? item.price_to }}€</span>
         </div>
         <div class="card-sources">
           <span v-for="src in item.sources" :key="src" :class="['source-tag', `source-tag--${src}`]">
@@ -187,7 +178,8 @@ const capitalize = (str) => str ? str.charAt(0).toUpperCase() + str.slice(1) : '
 }
 
 .verified-badge {
-  color: var(--clr-primary, #1da1f2); /* Twitter-like blue if primary differs */
+  color: var(--clr-primary, #1da1f2);
+  /* Twitter-like blue if primary differs */
   font-size: 1rem;
   flex-shrink: 0;
 }

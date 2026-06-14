@@ -1,0 +1,5 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="cuanto cuesta mark">
+  <text x="3" y="56" font-family="Montserrat, &#39;Plus Jakarta Sans&#39;, system-ui, sans-serif" font-size="62" font-weight="800" fill="#2C3E50">€</text>
+  <circle cx="48" cy="17" r="14.5" fill="#1EA64C" stroke="#FFFFFF" stroke-width="2.5"></circle>
+  <path d="M41.5 17.2l4.5 4.5 7.5-8" fill="none" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
